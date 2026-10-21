@@ -1,0 +1,1 @@
+{"pair":"sw5_23","h":"0.05","d":5,"word":[32,10],"g_up":-0.26483398344692155,"N":{"eps":0.001,"lambda":"-0.265834","nV":4626,"replay_ok":true,"tries":[{"eps":1E-5,"closed":false,"nV":5748,"secs":600.00684575,"reason":"time"},{"eps":0.001,"closed":true,"nV":4626,"secs":382.4035505,"reason":"closed"}]},"T":[],"secs":2052.7219452916665}

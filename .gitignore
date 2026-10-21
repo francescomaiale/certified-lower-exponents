@@ -1,0 +1,10 @@
+# Local files; keep all supplied scientific data, certificates and results.
+.DS_Store
+Thumbs.db
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+*.asv
+*.m~
+matlab_crash_dump.*

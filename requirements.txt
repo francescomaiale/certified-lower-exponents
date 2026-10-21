@@ -1,0 +1,2 @@
+# Independent certificate replay (tested with Python 3.12).
+numpy==1.26.4

@@ -1,0 +1,53 @@
+{
+"row": "case148_0.1_rowsumN",
+"kind": "trivial",
+"case": "case148",
+"h": "0.1",
+"orientation": "N",
+"statement": "lambda_check >= -3.669289  (lsr(B_h) >= t, B_h = I + h A_i)",
+"t": "6330711/10000000",
+"lambda_lower": "-3.669289",
+"lambda_lower_exact": "-3669289/1000000",
+"t_star": "6330711517873949/10000000000000000",
+"t_star_float": 0.6330711517873949,
+"binding": {
+"mode": 0,
+"vertex": 0,
+"data": "decimal"
+},
+"negative_control": {
+"c": null,
+"tau_up": "6330711517873949/10000000000000000",
+"tau_up_float": 0.6330711517873949
+},
+"data_versions": [
+"decimal",
+"binary64"
+],
+"meta": {
+"nV": 1
+},
+"vertices": [
+[
+"1",
+"1",
+"1"
+]
+],
+"weights": [
+{
+"mode": 0,
+"vertex": 0,
+"lambda": {
+"0": "1"
+}
+},
+{
+"mode": 1,
+"vertex": 0,
+"lambda": {
+"0": "1"
+}
+}
+]
+}

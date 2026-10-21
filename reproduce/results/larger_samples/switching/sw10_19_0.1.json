@@ -1,0 +1,1 @@
+{"pair":"sw10_19","h":"0.1","d":10,"word":[10,7],"g_up":0.5514348228479915,"N":{"eps":0.001,"lambda":"0.550434","nV":3509,"replay_ok":true,"tries":[{"eps":1E-5,"closed":false,"nV":4815,"secs":600.07169695833329,"reason":"time"},{"eps":0.001,"closed":true,"nV":3509,"secs":201.49485629166668,"reason":"closed"}]},"T":[],"secs":1584.9187459583334}

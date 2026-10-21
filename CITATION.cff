@@ -1,0 +1,30 @@
+# Citation metadata.  Fields marked TODO are to be completed before the first release.
+cff-version: 1.2.0
+message: "If you use this software, please cite the paper below."
+title: "Certified brackets for lower exponents of positive switched systems (MATLAB code)"
+authors:
+  - family-names: "Maiale"
+    given-names: "Francesco Paolo"
+  # TODO: co-authors of the paper, in the paper's order
+version: "1.0.0"                     # TODO: confirm at the first release
+date-released: "TODO-YYYY-MM-DD"
+license: "MIT"
+repository-code: "TODO: https://github.com/<owner>/<repository>"
+identifiers:
+  - type: doi
+    value: "TODO: Zenodo DOI of this release"
+keywords:
+  - lower Lyapunov exponent
+  - positive switched systems
+  - Metzler matrices
+  - lower spectral radius
+  - certified computation
+preferred-citation:
+  type: article
+  title: "Euler discretizations, invariant faces and certified brackets for lower exponents of positive switched systems"
+  authors:
+    - family-names: "Maiale"
+      given-names: "Francesco Paolo"
+    # TODO: co-authors
+  journal: "TODO (arXiv preprint arXiv:XXXX.XXXXX)"
+  year: "TODO"

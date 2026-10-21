@@ -1,0 +1,1 @@
+{"pair":"sw10_27","h":"0.1","d":10,"word":[7,1],"g_up":0.40859796459239206,"N":{"eps":0.001,"lambda":"0.407597","nV":2568,"replay_ok":true,"tries":[{"eps":1E-5,"closed":false,"nV":3106,"secs":707.08780383333328,"reason":"time"},{"eps":0.001,"closed":true,"nV":2568,"secs":144.15463633333334,"reason":"closed"}]},"T":[],"secs":1420.58242075}

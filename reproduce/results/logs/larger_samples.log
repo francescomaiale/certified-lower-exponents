@@ -1,0 +1,11 @@
+---- 21-Oct-2026 11:16:15
+sw5_11 schedule: lambda_check <= 0.562844 (float +0.562843, c +0.564143), replay 1
+---- 21-Oct-2026 11:16:21
+sw5_11 h = 0.1: word 1^6 2^1, g(h) <= +0.544576; N: 0.544565 (eps 1e-05)
+---- 21-Oct-2026 11:17:00
+d10_sparse8 best upper: lambda_check <= 0.973159 (schedule), replay 1
+---- 21-Oct-2026 11:17:18
+sw10_11_0.1_N extended: best  (eps NaN), 20 s
+sw10_11_0.1_T extended: best  (eps NaN), 24 s
+sw10_11_0.05_N extended: best  (eps NaN), 20 s
+sw10_11_0.05_T extended: best  (eps NaN), 27 s
