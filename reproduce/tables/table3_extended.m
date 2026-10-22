@@ -6,8 +6,8 @@ function T = table3_extended(varargin)
 %   final vertex set of the run of [GM] (Appendix B), at h = 0.05 also the certified h = 0.1 polytope of Table 3 if it
 %   has this orientation; levels eps = 0.15, 0.1, 0.05, 0.02, 0.01, 1e-3, 1e-5 below the current one, 1800 s and
 %   20000 vertices per closure; every closed polytope certified exactly in both data readings and replayed.
-%   The vertex sets of [GM] are not part of this package: pass 'gm_dir', a folder with <pair>_0.1_E_V.mat (variable V,
-%   d x n), from the runs of Appendix B with the code of [GM] (commit 181d6b5); without it that seed is skipped.
+%   The original GM vertex sets are bundled in results/gm_original/switching and used by default.
+%   'gm_dir' overrides that directory (<pair>_0.1_E_V.mat, variable V, d x n); an explicit '' skips GM seeds.
 %   'part'  'run'      the rows ('rows', e.g. {'sw10_1_0.1_N'}; default all 34); records and certificates go to
 %                      results/table3_extended/run/ (option 'rdir'), so that a run never overwrites the stored ones
 %           'replay'   certificates/table3_extended (the printed bounds): MATLAB replay_all (about 2.7 hours on one
@@ -18,10 +18,11 @@ function T = table3_extended(varargin)
 %   Long: the paper's runs took up to 3.5 hours per row (34 single-threaded MATLAB processes, 12 at a time).
 
 p = inputParser;
-p.addParameter('part', 'summary'); p.addParameter('rows', {}); p.addParameter('gm_dir', ''); p.addParameter('cap', 1800);
+p.addParameter('part', 'summary'); p.addParameter('rows', {}); p.addParameter('gm_dir', 'bundled'); p.addParameter('cap', 1800);
 p.addParameter('rdir', ''); p.addParameter('force', false);
 p.parse(varargin{:}); o = p.Results;
 root = paperB_root(); T = [];
+if strcmp(o.gm_dir, 'bundled'), o.gm_dir = fullfile(root, 'results', 'gm_original', 'switching'); end
 switch o.part
     case 'run'
         rdir = o.rdir; if isempty(rdir), rdir = fullfile(root, 'results', 'table3_extended', 'run'); end
@@ -56,7 +57,11 @@ P = table3_row(pid, h); eps_cur = L.g_up - str2double(P.lower);
 extra = [];
 if orient == 'T' && strcmp(h, '0.1') && ~isempty(o.gm_dir)
     g = fullfile(o.gm_dir, sprintf('%s_E_V.mat', row));
-    if isfile(g), S = load(g); extra = S.V; end
+    assert(isfile(g), 'table3_extended:missingSeed', 'Missing GM seed: %s', g);
+    S = load(g, 'V'); extra = S.V;
+    assert(isreal(extra) && size(extra, 1) == size(A{1}, 1) && ~isempty(extra) && ...
+           all(isfinite(extra(:))) && all(extra(:) >= 0) && all(sum(extra, 1) > 0), ...
+           'table3_extended:invalidSeed', 'Invalid GM vertex set: %s', g);
 end
 src01 = '';
 if strcmp(h, '0.05')

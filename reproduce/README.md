@@ -4,8 +4,8 @@ This folder contains MATLAB drivers, data and certificates for the computations 
 
 > *Euler discretizations, invariant faces and certified brackets for lower exponents of positive switched systems*
 
-(called "the paper" below), except the runs of the algorithm of Guglielmi and Maiale in Appendix B (see the
-last section). The original timing wrappers and some final GM seed sets are also absent; the supplied certificates can be checked without them. The code itself is in `../src`. For a family of Metzler matrices `A_1, ..., A_m`, the paper brackets the lower Lyapunov
+(called "the paper" below). The main certification code is in `../src`; Appendix B comparison wrappers, upstream
+helpers, original run records and final GM seeds are also included (see the last section). For a family of Metzler matrices `A_1, ..., A_m`, the paper brackets the lower Lyapunov
 exponent `lambda_check` of `x' = A_sigma x` by the lower spectral radii of the explicit and implicit Euler families,
 `g(h) <= lambda_check <= G(h)`, and certifies every endpoint of the reported continuous-time brackets in exact rational arithmetic. Explicit-word
 estimates, mixture minimizations and rate diagnostics remain floating point, as do the Algorithm (L) upper bounds:
@@ -145,7 +145,7 @@ Python replays (`independent_replay/python/run_all.py`).
   Obs. 3.11: c = -0.1949763083 at alpha* = 0.3905 and the predicted slope 1.478.
 * **Computation 3.8** (`comp38_reducible_pairs`): for cases 77, 148, 677, 1195 and 1440, in both orientations, the
   invariant proper faces with exact exponent bounds and the certified bound for c (`faces_<case>.json`); the cone
-  of case 148 (transposed, h1 = 1/5, kappa = 1/20) with its support classes (all nonempty subsets but {3}), touching
+  of case 148 (transposed, h_C = 1/5, kappa = 1/20; the certificate field retains the historical name `h1`) with its support classes (all nonempty subsets but {3}), touching
   only the slow face {1,3}; the invariant polygons of cases 77 (21 vertices, coordinates >= 0.0796, as in the paper)
   and 677 (see the differences below).
 * **Table 2, Rem. 4.5, Obs. 4.6** (`table2_test_pairs`): every lower and upper bound and every width; the transfer
@@ -166,13 +166,14 @@ Python replays (`independent_replay/python/run_all.py`).
 * **Obs. 4.8, Table 3, extended search** (`table3_extended`): the eight d = 10 bounds marked + (six at h = 0.1, two at
   h = 0.05) and the resulting widths, from the 34 runs of the extended search (records in `results/table3_extended/`;
   the certificates of the printed bounds in `certificates/table3_extended`). Its seeds include, on the transposed family
-  at h = 0.1, the final vertex sets of the runs of Appendix B, which this package does not contain: pass `'gm_dir'`
-  to use them in a new run.
+  at h = 0.1, the seven original final vertex sets in `results/gm_original/switching`, used by default.
+  Pass `'gm_dir', folder` to override them, or `'gm_dir', ''` to explicitly omit that seed.
 * **Obs. 4.7 and 4.8, Tables 9 and 10** (`larger_samples`): for the 45 further switching pairs, the certified
   schedules and the lower bounds at both steps (both orientations, and the extended search on the d = 10 rows); for
   the 33 further chattering pairs, the certified upper bound for c (a schedule for `d10_sparse8`), the lower bounds
-  and the implicit Euler bounds at both steps; the counts and widths quoted in Obs. 4.7 and 4.8. Part `'summary'`
-  rebuilds both tables, as LaTeX rows identical to the paper's, from the stored certificates; parts `'switching'`,
+  and the implicit Euler bounds at both steps, plus the floating-point explicit-word estimates at h = 0.1; the counts and widths quoted in Obs. 4.7 and 4.8. Part `'summary'`
+  rebuilds both tables, as LaTeX rows identical to the paper's, from the stored certificates and `results/larger_samples/scaling_word_estimates.json` (original nine-decimal log estimates,
+  with excerpts and source hashes); parts `'switching'`,
   `'chattering'` and `'extended'` rerun the computations (into `results/larger_samples/run/`).
 * **Obs. 4.9, Table 11** (`table8_rates`): alpha*, Q and the observed gap and separate slopes for all 14 pairs; the deviations and the
   midpoint accuracy (0.83 h^2); the extrapolation remark for switching pair 4 (-0.4270 above -0.4301).
@@ -268,12 +269,20 @@ Quantities that depend on the machine and are not part of any claim:
 6. **Fig. 1, Algorithm (L) points.** These runs are limited by a wall-clock budget (1200 s of closures), so their
    results depend on the machine; our 12 points are identical to the paper's.
 
-## Appendix B (not included)
+## Appendix B comparisons
 
-Appendix B reports runs of the Gripenberg-type algorithm of Guglielmi and Maiale (SIAM J. Matrix Anal. Appl. 47
-(2026) 77-106). Their code is not part of this repository; it is at
-https://github.com/francescomaiale/subradius_computation (the runs of the paper use commit `181d6b5`). The polytope certificates that Appendix B quotes are included, since checking them needs only the code of this repository: `certificates/appB_test` (each lower estimate of Table 5 certified a posteriori, the final vertex sets of the runs, and the closures seeded by them), `appB_fixed` (the fixed-antinorm runs), `appB_switching` (Table 7: vertex sets and seeded closures) and `appB_scaling` (Table 6: seeded closures). `replay_all` and the Python replay check them like every other certificate. The runs themselves were made with the code of Guglielmi and Maiale at the commit above, with a wall-clock limit added.
+`gm/` contains the portable `gm_fixed_job` driver, both capped algorithms, their required upstream helpers, and the
+upstream GPL-3.0 licence and provenance. See [`gm/README.md`](gm/README.md) for commands and budgets. No external
+checkout is needed. Fresh runs go to `results/gm_runs/`, leaving the historical outputs intact.
+
+`results/gm_original/` preserves all 142 original JSON run records and final vertex sets, with SHA-256 hashes and
+matrix dimensions in `MANIFEST.json`. The seven h = 0.1 transposed seeds needed by `table3_extended` are included.
+The exact certificates remain in `certificates/appB_test`, `appB_fixed`, `appB_switching` and `appB_scaling`, checked
+by both replays. GM floating-point estimates and saved seeds are search diagnostics, not themselves certificates.
+Wall-clock caps are checked between batches of products, so long LP calls can overrun them; product budgets are
+checked between levels. Repeating a search need not reproduce the original runtime, vertices or final estimate.
 
 ## Citing and license
 
-See `../CITATION.cff` (to be completed) and `../LICENSE` (the license is still to be chosen).
+See `../CITATION.cff` (author and release details deferred) and `../LICENSE` (MIT).
+The optional GM comparison code retains its separate GPL-3.0 licence in `gm/LICENSE`.

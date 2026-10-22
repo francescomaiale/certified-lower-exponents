@@ -72,11 +72,14 @@ certificate replays on pushes and pull requests. MATLAB validation remains a sep
 
 ## Related code
 
-Appendix B of the paper reports runs of the Gripenberg-type algorithm of Guglielmi and Maiale (SIAM J. Matrix Anal.
-Appl. 47 (2026) 77-106). That code is not part of this repository. It is available at
-https://github.com/francescomaiale/subradius_computation; the runs reported in the paper use its commit `181d6b5`
-(October 2026). The extended search of Obs. 4.8 also seeded some closures with the final vertex sets of those runs;
-these vertex sets are not included either (see `reproduce/README.md`, driver `table3_extended`).
+Appendix B reports runs of the Gripenberg-type algorithm of Guglielmi and Maiale (SIAM J. Matrix Anal.
+Appl. 47 (2026) 77-106). The portable wall-clock wrapper, capped routines and their two upstream helpers are now
+bundled in [`reproduce/gm`](reproduce/gm/README.md), based on upstream commit
+`181d6b59be56a02dab1a040254b95c905d7f49ae`. That optional comparison component retains the upstream GPL-3.0
+licence. The main certification and replay package remains MIT-licensed.
+
+Original Appendix B run records and all 142 final vertex sets are in `reproduce/results/gm_original`, with a
+SHA-256 manifest. This includes the seven seeds used automatically by `table3_extended` at h = 0.1.
 
 ## Notes
 
@@ -90,7 +93,8 @@ these vertex sets are not included either (see `reproduce/README.md`, driver `ta
 
 ## Citing and license
 
-This software is distributed under the [MIT License](LICENSE).
+The main software is distributed under the [MIT License](LICENSE). The optional GM comparison code in
+`reproduce/gm/` is covered by its own [GPL-3.0 licence](reproduce/gm/LICENSE); see its provenance notice.
 
 See `CITATION.cff` for the citation metadata, which remains to be completed. Before the first public release,
 confirm the complete author list and replace the citation placeholders with the repository URL and actual

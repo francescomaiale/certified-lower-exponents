@@ -1,0 +1,197 @@
+[chattering_d5_dense4_0.1.log]
+lower: c = min eta(S_alpha) = +0.224752221; best explicit word (k = 27): g(h) <= +0.208194216; search up to +0.208194216
+
+[chattering_d5_dense4_0.05.log]
+lower: c = min eta(S_alpha) = +0.224752221; best explicit word (k = 76): g(h) <= +0.216505835; search up to +0.216505835
+
+[chattering_d5_dense5_0.1.log]
+lower: c = min eta(S_alpha) = -0.102452253; best explicit word (k = 14): g(h) <= -0.109221267; search up to -0.109221267
+
+[chattering_d5_dense5_0.05.log]
+lower: c = min eta(S_alpha) = -0.102452253; best explicit word (k = 10): g(h) <= -0.105814374; search up to -0.105814374
+
+[chattering_d5_dense6_0.1.log]
+lower: c = min eta(S_alpha) = +0.590669235; best explicit word (k = 10): g(h) <= +0.561428728; search up to +0.561428728
+
+[chattering_d5_dense6_0.05.log]
+lower: c = min eta(S_alpha) = +0.590669235; best explicit word (k = 33): g(h) <= +0.576016109; search up to +0.576016109
+
+[chattering_d5_dense7_0.1.log]
+lower: c = min eta(S_alpha) = +0.553354614; best explicit word (k = 23): g(h) <= +0.536324810; search up to +0.536324810
+
+[chattering_d5_dense7_0.05.log]
+lower: c = min eta(S_alpha) = +0.553354614; best explicit word (k = 15): g(h) <= +0.544790179; search up to +0.544790179
+
+[chattering_d5_dense8_0.1.log]
+lower: c = min eta(S_alpha) = +0.956854280; best explicit word (k = 3): g(h) <= +0.940615818; search up to +0.940615818
+
+[chattering_d5_dense8_0.05.log]
+lower: c = min eta(S_alpha) = +0.956854280; best explicit word (k = 3): g(h) <= +0.948529522; search up to +0.948529522
+
+[chattering_d5_dense9_0.1.log]
+lower: c = min eta(S_alpha) = +0.338855937; best explicit word (k = 5): g(h) <= +0.290975293; search up to +0.290975293
+
+[chattering_d5_dense9_0.05.log]
+lower: c = min eta(S_alpha) = +0.338855937; best explicit word (k = 57): g(h) <= +0.315062245; search up to +0.315062245
+
+[chattering_d5_dense10_0.1.log]
+lower: c = min eta(S_alpha) = +0.491872613; best explicit word (k = 25): g(h) <= +0.476546733; search up to +0.476546733
+
+[chattering_d5_dense10_0.05.log]
+lower: c = min eta(S_alpha) = +0.491872613; best explicit word (k = 73): g(h) <= +0.484052403; search up to +0.484052403
+
+[chattering_d5_sparse4_0.1.log]
+lower: c = min eta(S_alpha) = -0.267567085; best explicit word (k = 7): g(h) <= -0.405494374; search up to -0.405494374
+
+[chattering_d5_sparse4_0.05.log]
+lower: c = min eta(S_alpha) = -0.267567085; best explicit word (k = 9): g(h) <= -0.333101469; search up to -0.333101469
+
+[chattering_d5_sparse5_0.1.log]
+lower: c = min eta(S_alpha) = -0.111087162; best explicit word (k = 19): g(h) <= -0.279162347; search up to -0.279162347
+
+[chattering_d5_sparse5_0.05.log]
+lower: c = min eta(S_alpha) = -0.111087162; best explicit word (k = 47): g(h) <= -0.190583974; search up to -0.190583974
+
+[chattering_d5_sparse6_0.1.log]
+lower: c = min eta(S_alpha) = +0.236625790; best explicit word (k = 14): g(h) <= +0.225359994; search up to +0.225359994
+
+[chattering_d5_sparse6_0.05.log]
+lower: c = min eta(S_alpha) = +0.236625790; best explicit word (k = 21): g(h) <= +0.230978016; search up to +0.230978016
+
+[chattering_d5_sparse7_0.1.log]
+lower: c = min eta(S_alpha) = +2.858513083; best explicit word (k = 3): g(h) <= +2.544951721; search up to +2.544951721
+
+[chattering_d5_sparse7_0.05.log]
+lower: c = min eta(S_alpha) = +2.858513083; best explicit word (k = 9): g(h) <= +2.703312406; search up to +2.703312406
+
+[chattering_d5_sparse8_0.1.log]
+lower: c = min eta(S_alpha) = -0.389270122; best explicit word (k = 21): g(h) <= -0.415082638; search up to -0.415082638
+
+[chattering_d5_sparse8_0.05.log]
+lower: c = min eta(S_alpha) = -0.389270122; best explicit word (k = 63): g(h) <= -0.401498623; search up to -0.401498623
+
+[chattering_d5_sparse9_0.1.log]
+lower: c = min eta(S_alpha) = +1.346247699; best explicit word (k = 5): g(h) <= +1.189855232; search up to +1.189855232
+
+[chattering_d5_sparse9_0.05.log]
+lower: c = min eta(S_alpha) = +1.346247699; best explicit word (k = 9): g(h) <= +1.276516792; search up to +1.276516792
+
+[chattering_d5_sparse10_0.1.log]
+lower: c = min eta(S_alpha) = -0.475098335; best explicit word (k = 20): g(h) <= -0.569407168; search up to -0.569407168
+
+[chattering_d5_sparse10_0.05.log]
+lower: c = min eta(S_alpha) = -0.475098335; best explicit word (k = 53): g(h) <= -0.521140078; search up to -0.521140078
+
+[chattering_d10_dense4_0.1.log]
+lower: c = min eta(S_alpha) = +0.396992600; best explicit word (k = 16): g(h) <= +0.393395927; search up to +0.393395927
+
+[chattering_d10_dense4_0.05.log]
+lower: c = min eta(S_alpha) = +0.396992600; best explicit word (k = 11): g(h) <= +0.395129320; search up to +0.395129320
+
+[chattering_d10_dense5_0.1.log]
+lower: c = min eta(S_alpha) = +0.592624570; best explicit word (k = 9): g(h) <= +0.579587458; search up to +0.579587458
+
+[chattering_d10_dense5_0.05.log]
+lower: c = min eta(S_alpha) = +0.592624570; best explicit word (k = 11): g(h) <= +0.585967512; search up to +0.585967512
+
+[chattering_d10_dense6_0.1.log]
+lower: c = min eta(S_alpha) = -0.014617926; best explicit word (k = 34): g(h) <= -0.059777319; search up to -0.059777319
+
+[chattering_d10_dense6_0.05.log]
+lower: c = min eta(S_alpha) = -0.014617926; best explicit word (k = 37): g(h) <= -0.036930080; search up to -0.036930080
+
+[chattering_d10_dense7_0.1.log]
+lower: c = min eta(S_alpha) = +0.769242559; best explicit word (k = 5): g(h) <= +0.759849273; search up to +0.759849273
+
+[chattering_d10_dense7_0.05.log]
+lower: c = min eta(S_alpha) = +0.769242559; best explicit word (k = 10): g(h) <= +0.764443280; search up to +0.764443280
+
+[chattering_d10_dense8_0.1.log]
+lower: c = min eta(S_alpha) = +1.052013580; best explicit word (k = 29): g(h) <= +1.045459363; search up to +1.045459363
+
+[chattering_d10_dense8_0.05.log]
+lower: c = min eta(S_alpha) = +1.052013580; best explicit word (k = 26): g(h) <= +1.048576464; search up to +1.048576464
+
+[chattering_d10_dense9_0.1.log]
+lower: c = min eta(S_alpha) = +0.004986292; best explicit word (k = 16): g(h) <= -0.019725396; search up to -0.019725396
+
+[chattering_d10_dense9_0.05.log]
+lower: c = min eta(S_alpha) = +0.004986292; best explicit word (k = 9): g(h) <= -0.007349791; search up to -0.007349791
+
+[chattering_d10_dense10_0.1.log]
+lower: c = min eta(S_alpha) = -0.184297205; best explicit word (k = 37): g(h) <= -0.193572128; search up to -0.193572128
+
+[chattering_d10_dense10_0.05.log]
+lower: c = min eta(S_alpha) = -0.184297205; best explicit word (k = 71): g(h) <= -0.188876192; search up to -0.188876192
+
+[chattering_d10_sparse4_0.1.log]
+lower: c = min eta(S_alpha) = +0.143601922; best explicit word (k = 11): g(h) <= +0.116892919; search up to +0.116892919
+
+[chattering_d10_sparse4_0.05.log]
+lower: c = min eta(S_alpha) = +0.143601922; best explicit word (k = 8): g(h) <= +0.129417631; search up to +0.129417631
+
+[chattering_d10_sparse5_0.1.log]
+lower: c = min eta(S_alpha) = -0.583787742; best explicit word (k = 24): g(h) <= -0.591249403; search up to -0.591249403
+
+[chattering_d10_sparse5_0.05.log]
+lower: c = min eta(S_alpha) = -0.583787742; best explicit word (k = 71): g(h) <= -0.587645113; search up to -0.587645113
+
+[chattering_d10_sparse6_0.1.log]
+lower: c = min eta(S_alpha) = -0.179129374; best explicit word (k = 11): g(h) <= -0.205900544; search up to -0.205900544
+
+[chattering_d10_sparse6_0.05.log]
+lower: c = min eta(S_alpha) = -0.179129374; best explicit word (k = 11): g(h) <= -0.192605915; search up to -0.192605915
+
+[chattering_d10_sparse7_0.1.log]
+lower: c = min eta(S_alpha) = +0.084505156; best explicit word (k = 37): g(h) <= +0.073598518; search up to +0.073598518
+
+[chattering_d10_sparse7_0.05.log]
+lower: c = min eta(S_alpha) = +0.084505156; best explicit word (k = 7): g(h) <= +0.078894315; search up to +0.078894315
+
+[chattering_d10_sparse8_0.1.log]
+lower: c = min eta(S_alpha) = +0.978382245; best explicit word (k = 12): g(h) <= +0.957095581; search up to +0.957095581
+
+[chattering_d10_sparse8_0.05.log]
+lower: c = min eta(S_alpha) = +0.978382245; best explicit word (k = 29): g(h) <= +0.965183014; search up to +0.965183014
+
+[chattering_d10_sparse9_0.1.log]
+lower: c = min eta(S_alpha) = +0.628627079; best explicit word (k = 21): g(h) <= +0.569674460; search up to +0.569674460
+
+[chattering_d10_sparse9_0.05.log]
+lower: c = min eta(S_alpha) = +0.628627079; best explicit word (k = 16): g(h) <= +0.599017390; search up to +0.599017390
+
+[chattering_d10_sparse10_0.1.log]
+lower: c = min eta(S_alpha) = +1.002925825; best explicit word (k = 7): g(h) <= +0.944047765; search up to +0.944047765
+
+[chattering_d10_sparse10_0.05.log]
+lower: c = min eta(S_alpha) = +1.002925825; best explicit word (k = 7): g(h) <= +0.973720312; search up to +0.973720312
+
+[chattering_d20_dense1_0.1.log]
+lower: c = min eta(S_alpha) = +0.538290950; best explicit word (k = 23): g(h) <= +0.514020229; search up to +0.514020229
+
+[chattering_d20_dense1_0.05.log]
+lower: c = min eta(S_alpha) = +0.538290950; best explicit word (k = 65): g(h) <= +0.525947123; search up to +0.525947123
+
+[chattering_d20_dense2_0.1.log]
+lower: c = min eta(S_alpha) = +0.519702587; best explicit word (k = 40): g(h) <= +0.514173868; search up to +0.514173868
+
+[chattering_d20_dense2_0.05.log]
+lower: c = min eta(S_alpha) = +0.519702587; best explicit word (k = 75): g(h) <= +0.516869297; search up to +0.516869297
+
+[chattering_d20_dense3_0.1.log]
+lower: c = min eta(S_alpha) = +0.690888728; best explicit word (k = 17): g(h) <= +0.685091300; search up to +0.685091300
+
+[chattering_d20_dense3_0.05.log]
+lower: c = min eta(S_alpha) = +0.690888728; best explicit word (k = 23): g(h) <= +0.687854215; search up to +0.687854215
+
+[chattering_d20_sparse1_0.1.log]
+lower: c = min eta(S_alpha) = +0.557883322; best explicit word (k = 10): g(h) <= +0.524682941; search up to +0.524682941
+
+[chattering_d20_sparse1_0.05.log]
+lower: c = min eta(S_alpha) = +0.557883322; best explicit word (k = 2): g(h) <= +0.541162330; search up to +0.541162330
+
+[chattering_d20_sparse2_0.1.log]
+lower: c = min eta(S_alpha) = +0.928955202; best explicit word (k = 2): g(h) <= +0.884727735; search up to +0.884727735
+
+[chattering_d20_sparse2_0.05.log]
+lower: c = min eta(S_alpha) = +0.928955202; best explicit word (k = 8): g(h) <= +0.906156351; search up to +0.906156351

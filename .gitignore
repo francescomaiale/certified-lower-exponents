@@ -8,3 +8,6 @@ __pycache__/
 *.asv
 *.m~
 matlab_crash_dump.*
+
+# Fresh GM runs are local; historical gm_original assets are tracked.
+reproduce/results/gm_runs/

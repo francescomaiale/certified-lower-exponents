@@ -1,0 +1,599 @@
+{
+  "description": "Floating-point explicit-word estimates printed to nine decimals in the original search logs. These are not exact certificates; the full words were not retained in those logs. Table 9 rounds these estimates upward to six decimals. Do not substitute certificate meta.t_up, which may also be capped by a mixture or implicit bound.",
+  "records": [
+    {
+      "pair": "d5_dense4",
+      "h": "0.1",
+      "g_up_logged": "+0.208194216",
+      "word_length": 27,
+      "source_log": "chattering_d5_dense4_0.1.log",
+      "source_sha256": "08ee461b6d9385e956c1e7e1159ab43c5f314ead8f66b696d266d4fa6000b6f5",
+      "source_line": "lower: c = min eta(S_alpha) = +0.224752221; best explicit word (k = 27): g(h) <= +0.208194216; search up to +0.208194216"
+    },
+    {
+      "pair": "d5_dense4",
+      "h": "0.05",
+      "g_up_logged": "+0.216505835",
+      "word_length": 76,
+      "source_log": "chattering_d5_dense4_0.05.log",
+      "source_sha256": "fe7f74743aec094b914680b626daf22dd88b8a55da98364b8174e6ecaf2184e7",
+      "source_line": "lower: c = min eta(S_alpha) = +0.224752221; best explicit word (k = 76): g(h) <= +0.216505835; search up to +0.216505835"
+    },
+    {
+      "pair": "d5_dense5",
+      "h": "0.1",
+      "g_up_logged": "-0.109221267",
+      "word_length": 14,
+      "source_log": "chattering_d5_dense5_0.1.log",
+      "source_sha256": "f758df58e3d4746909e721e453ab55cf89f13111a15362daea5e6a65cf9c2c65",
+      "source_line": "lower: c = min eta(S_alpha) = -0.102452253; best explicit word (k = 14): g(h) <= -0.109221267; search up to -0.109221267"
+    },
+    {
+      "pair": "d5_dense5",
+      "h": "0.05",
+      "g_up_logged": "-0.105814374",
+      "word_length": 10,
+      "source_log": "chattering_d5_dense5_0.05.log",
+      "source_sha256": "c7ce64d98e0e83a8acccd9f900c293c26c0505f9599d3f2f9bb414b4478f90b0",
+      "source_line": "lower: c = min eta(S_alpha) = -0.102452253; best explicit word (k = 10): g(h) <= -0.105814374; search up to -0.105814374"
+    },
+    {
+      "pair": "d5_dense6",
+      "h": "0.1",
+      "g_up_logged": "+0.561428728",
+      "word_length": 10,
+      "source_log": "chattering_d5_dense6_0.1.log",
+      "source_sha256": "ee2a84aea9f2fd4c33dd9b56442fab10010d96f476d6e75eedf364f3e1318eaf",
+      "source_line": "lower: c = min eta(S_alpha) = +0.590669235; best explicit word (k = 10): g(h) <= +0.561428728; search up to +0.561428728"
+    },
+    {
+      "pair": "d5_dense6",
+      "h": "0.05",
+      "g_up_logged": "+0.576016109",
+      "word_length": 33,
+      "source_log": "chattering_d5_dense6_0.05.log",
+      "source_sha256": "42705b9981120dc8f59ddab0bf0a2e6f5e81a15877af73408d08aa04f2170fbf",
+      "source_line": "lower: c = min eta(S_alpha) = +0.590669235; best explicit word (k = 33): g(h) <= +0.576016109; search up to +0.576016109"
+    },
+    {
+      "pair": "d5_dense7",
+      "h": "0.1",
+      "g_up_logged": "+0.536324810",
+      "word_length": 23,
+      "source_log": "chattering_d5_dense7_0.1.log",
+      "source_sha256": "e9548fd4323df6a79a44a79691f7a54a110bc87b1556e66964f11b2fa0978184",
+      "source_line": "lower: c = min eta(S_alpha) = +0.553354614; best explicit word (k = 23): g(h) <= +0.536324810; search up to +0.536324810"
+    },
+    {
+      "pair": "d5_dense7",
+      "h": "0.05",
+      "g_up_logged": "+0.544790179",
+      "word_length": 15,
+      "source_log": "chattering_d5_dense7_0.05.log",
+      "source_sha256": "dc63f3f3063f9d7531686371da2136212215408926349aa49d6750d8609516df",
+      "source_line": "lower: c = min eta(S_alpha) = +0.553354614; best explicit word (k = 15): g(h) <= +0.544790179; search up to +0.544790179"
+    },
+    {
+      "pair": "d5_dense8",
+      "h": "0.1",
+      "g_up_logged": "+0.940615818",
+      "word_length": 3,
+      "source_log": "chattering_d5_dense8_0.1.log",
+      "source_sha256": "8dde344bd5e3f4d62966cf482a8d99f9181c513ec834ad221460a6be1740ae7f",
+      "source_line": "lower: c = min eta(S_alpha) = +0.956854280; best explicit word (k = 3): g(h) <= +0.940615818; search up to +0.940615818"
+    },
+    {
+      "pair": "d5_dense8",
+      "h": "0.05",
+      "g_up_logged": "+0.948529522",
+      "word_length": 3,
+      "source_log": "chattering_d5_dense8_0.05.log",
+      "source_sha256": "16aaa5c424a9d5f846c1efcb5b5ec275903356c03f0ead6586b286f9eda225bd",
+      "source_line": "lower: c = min eta(S_alpha) = +0.956854280; best explicit word (k = 3): g(h) <= +0.948529522; search up to +0.948529522"
+    },
+    {
+      "pair": "d5_dense9",
+      "h": "0.1",
+      "g_up_logged": "+0.290975293",
+      "word_length": 5,
+      "source_log": "chattering_d5_dense9_0.1.log",
+      "source_sha256": "d46241a7b61d1fc930e96593ec6a00f46aeb4809daadfe38a8171d3811c71e5b",
+      "source_line": "lower: c = min eta(S_alpha) = +0.338855937; best explicit word (k = 5): g(h) <= +0.290975293; search up to +0.290975293"
+    },
+    {
+      "pair": "d5_dense9",
+      "h": "0.05",
+      "g_up_logged": "+0.315062245",
+      "word_length": 57,
+      "source_log": "chattering_d5_dense9_0.05.log",
+      "source_sha256": "7dfa4a6292571026d7828d24200956df4c65ee8733b984cf605424b69725e096",
+      "source_line": "lower: c = min eta(S_alpha) = +0.338855937; best explicit word (k = 57): g(h) <= +0.315062245; search up to +0.315062245"
+    },
+    {
+      "pair": "d5_dense10",
+      "h": "0.1",
+      "g_up_logged": "+0.476546733",
+      "word_length": 25,
+      "source_log": "chattering_d5_dense10_0.1.log",
+      "source_sha256": "c50cd43369de07286bdacfd7c942c2e5857fc351f6d18c755d8db347298de88d",
+      "source_line": "lower: c = min eta(S_alpha) = +0.491872613; best explicit word (k = 25): g(h) <= +0.476546733; search up to +0.476546733"
+    },
+    {
+      "pair": "d5_dense10",
+      "h": "0.05",
+      "g_up_logged": "+0.484052403",
+      "word_length": 73,
+      "source_log": "chattering_d5_dense10_0.05.log",
+      "source_sha256": "e185a73a99be21ea8ea9c78153a9fa4c4bea0f048f49d1dd466e5dada03dcfc0",
+      "source_line": "lower: c = min eta(S_alpha) = +0.491872613; best explicit word (k = 73): g(h) <= +0.484052403; search up to +0.484052403"
+    },
+    {
+      "pair": "d5_sparse4",
+      "h": "0.1",
+      "g_up_logged": "-0.405494374",
+      "word_length": 7,
+      "source_log": "chattering_d5_sparse4_0.1.log",
+      "source_sha256": "87a4320a8d87dba64462e7588c00c230fdf6dce371b5451c89d7bd2d5220b7c2",
+      "source_line": "lower: c = min eta(S_alpha) = -0.267567085; best explicit word (k = 7): g(h) <= -0.405494374; search up to -0.405494374"
+    },
+    {
+      "pair": "d5_sparse4",
+      "h": "0.05",
+      "g_up_logged": "-0.333101469",
+      "word_length": 9,
+      "source_log": "chattering_d5_sparse4_0.05.log",
+      "source_sha256": "930799934ee647833215eef1134d0a3244881d782227ce44e54a8e63149f5f5a",
+      "source_line": "lower: c = min eta(S_alpha) = -0.267567085; best explicit word (k = 9): g(h) <= -0.333101469; search up to -0.333101469"
+    },
+    {
+      "pair": "d5_sparse5",
+      "h": "0.1",
+      "g_up_logged": "-0.279162347",
+      "word_length": 19,
+      "source_log": "chattering_d5_sparse5_0.1.log",
+      "source_sha256": "17c33e1ceb23568ed493b74992c0e1cf471a7ec1e1715e8e480642c535c4c371",
+      "source_line": "lower: c = min eta(S_alpha) = -0.111087162; best explicit word (k = 19): g(h) <= -0.279162347; search up to -0.279162347"
+    },
+    {
+      "pair": "d5_sparse5",
+      "h": "0.05",
+      "g_up_logged": "-0.190583974",
+      "word_length": 47,
+      "source_log": "chattering_d5_sparse5_0.05.log",
+      "source_sha256": "4e28ba411e00fc5baaab14bc63e77b1c837342de99ec4880ab15c921d98327e3",
+      "source_line": "lower: c = min eta(S_alpha) = -0.111087162; best explicit word (k = 47): g(h) <= -0.190583974; search up to -0.190583974"
+    },
+    {
+      "pair": "d5_sparse6",
+      "h": "0.1",
+      "g_up_logged": "+0.225359994",
+      "word_length": 14,
+      "source_log": "chattering_d5_sparse6_0.1.log",
+      "source_sha256": "dbcffe9fce4a820bab2dd6b71662baf18fe7a6b99b9338899052469845cae5bf",
+      "source_line": "lower: c = min eta(S_alpha) = +0.236625790; best explicit word (k = 14): g(h) <= +0.225359994; search up to +0.225359994"
+    },
+    {
+      "pair": "d5_sparse6",
+      "h": "0.05",
+      "g_up_logged": "+0.230978016",
+      "word_length": 21,
+      "source_log": "chattering_d5_sparse6_0.05.log",
+      "source_sha256": "9895a9b52d1f2575859c233e7f40295ac37504e0cd4127cc70f6708fa66e0255",
+      "source_line": "lower: c = min eta(S_alpha) = +0.236625790; best explicit word (k = 21): g(h) <= +0.230978016; search up to +0.230978016"
+    },
+    {
+      "pair": "d5_sparse7",
+      "h": "0.1",
+      "g_up_logged": "+2.544951721",
+      "word_length": 3,
+      "source_log": "chattering_d5_sparse7_0.1.log",
+      "source_sha256": "a8be7b0754fda2b0396e008e019a4569fe6bd158c0f7980d3beb0cf1540f0d06",
+      "source_line": "lower: c = min eta(S_alpha) = +2.858513083; best explicit word (k = 3): g(h) <= +2.544951721; search up to +2.544951721"
+    },
+    {
+      "pair": "d5_sparse7",
+      "h": "0.05",
+      "g_up_logged": "+2.703312406",
+      "word_length": 9,
+      "source_log": "chattering_d5_sparse7_0.05.log",
+      "source_sha256": "6e1e128aee75fbaa5c60d4b7d4de47463e48e6ff7aeb2902db08729b633e6acd",
+      "source_line": "lower: c = min eta(S_alpha) = +2.858513083; best explicit word (k = 9): g(h) <= +2.703312406; search up to +2.703312406"
+    },
+    {
+      "pair": "d5_sparse8",
+      "h": "0.1",
+      "g_up_logged": "-0.415082638",
+      "word_length": 21,
+      "source_log": "chattering_d5_sparse8_0.1.log",
+      "source_sha256": "d49aa045a0993356540d8cc3c3a086cf89051434ef8b2e72183b4a51807604cb",
+      "source_line": "lower: c = min eta(S_alpha) = -0.389270122; best explicit word (k = 21): g(h) <= -0.415082638; search up to -0.415082638"
+    },
+    {
+      "pair": "d5_sparse8",
+      "h": "0.05",
+      "g_up_logged": "-0.401498623",
+      "word_length": 63,
+      "source_log": "chattering_d5_sparse8_0.05.log",
+      "source_sha256": "ff0acca58d56279891a855e6ca595a3efad5c3547327f39219cd27b272301430",
+      "source_line": "lower: c = min eta(S_alpha) = -0.389270122; best explicit word (k = 63): g(h) <= -0.401498623; search up to -0.401498623"
+    },
+    {
+      "pair": "d5_sparse9",
+      "h": "0.1",
+      "g_up_logged": "+1.189855232",
+      "word_length": 5,
+      "source_log": "chattering_d5_sparse9_0.1.log",
+      "source_sha256": "8b63b425cb165fa338389eef89c9d549dd7cb710b3a8d58ca657cd7eab9fe571",
+      "source_line": "lower: c = min eta(S_alpha) = +1.346247699; best explicit word (k = 5): g(h) <= +1.189855232; search up to +1.189855232"
+    },
+    {
+      "pair": "d5_sparse9",
+      "h": "0.05",
+      "g_up_logged": "+1.276516792",
+      "word_length": 9,
+      "source_log": "chattering_d5_sparse9_0.05.log",
+      "source_sha256": "9c5aafcc49b75e311a4c4f29a7f2bfebff5d8fed21ff11474d47a74fb54676df",
+      "source_line": "lower: c = min eta(S_alpha) = +1.346247699; best explicit word (k = 9): g(h) <= +1.276516792; search up to +1.276516792"
+    },
+    {
+      "pair": "d5_sparse10",
+      "h": "0.1",
+      "g_up_logged": "-0.569407168",
+      "word_length": 20,
+      "source_log": "chattering_d5_sparse10_0.1.log",
+      "source_sha256": "9aa288ac271111cac0e0b2f5bd033dade35e85e5d8ad95df8c7c23e3e6b7e1b9",
+      "source_line": "lower: c = min eta(S_alpha) = -0.475098335; best explicit word (k = 20): g(h) <= -0.569407168; search up to -0.569407168"
+    },
+    {
+      "pair": "d5_sparse10",
+      "h": "0.05",
+      "g_up_logged": "-0.521140078",
+      "word_length": 53,
+      "source_log": "chattering_d5_sparse10_0.05.log",
+      "source_sha256": "94df6619fd0de5373edacbadd287f8ae06dcba05069a8fadfe64f59be00268c8",
+      "source_line": "lower: c = min eta(S_alpha) = -0.475098335; best explicit word (k = 53): g(h) <= -0.521140078; search up to -0.521140078"
+    },
+    {
+      "pair": "d10_dense4",
+      "h": "0.1",
+      "g_up_logged": "+0.393395927",
+      "word_length": 16,
+      "source_log": "chattering_d10_dense4_0.1.log",
+      "source_sha256": "79b832e92ce7a380cc876c49e05871e573b73f71602416dd805b8aa780f950cd",
+      "source_line": "lower: c = min eta(S_alpha) = +0.396992600; best explicit word (k = 16): g(h) <= +0.393395927; search up to +0.393395927"
+    },
+    {
+      "pair": "d10_dense4",
+      "h": "0.05",
+      "g_up_logged": "+0.395129320",
+      "word_length": 11,
+      "source_log": "chattering_d10_dense4_0.05.log",
+      "source_sha256": "fd75802f5321e519c365797f478f90e9886e9739a26d8bd3e94e9fffd699452b",
+      "source_line": "lower: c = min eta(S_alpha) = +0.396992600; best explicit word (k = 11): g(h) <= +0.395129320; search up to +0.395129320"
+    },
+    {
+      "pair": "d10_dense5",
+      "h": "0.1",
+      "g_up_logged": "+0.579587458",
+      "word_length": 9,
+      "source_log": "chattering_d10_dense5_0.1.log",
+      "source_sha256": "c062f7bddb99c1149486f899ad0a05bab6a878cf399086361018f8048661d851",
+      "source_line": "lower: c = min eta(S_alpha) = +0.592624570; best explicit word (k = 9): g(h) <= +0.579587458; search up to +0.579587458"
+    },
+    {
+      "pair": "d10_dense5",
+      "h": "0.05",
+      "g_up_logged": "+0.585967512",
+      "word_length": 11,
+      "source_log": "chattering_d10_dense5_0.05.log",
+      "source_sha256": "6eb3b46722264acc444c3af8d2a92caef42b0fcfa11fe55684c4ddce8fd0dd6c",
+      "source_line": "lower: c = min eta(S_alpha) = +0.592624570; best explicit word (k = 11): g(h) <= +0.585967512; search up to +0.585967512"
+    },
+    {
+      "pair": "d10_dense6",
+      "h": "0.1",
+      "g_up_logged": "-0.059777319",
+      "word_length": 34,
+      "source_log": "chattering_d10_dense6_0.1.log",
+      "source_sha256": "911c2517cfd25729c1fd0b40fb8bf323b09703111f369238d801972d13471eee",
+      "source_line": "lower: c = min eta(S_alpha) = -0.014617926; best explicit word (k = 34): g(h) <= -0.059777319; search up to -0.059777319"
+    },
+    {
+      "pair": "d10_dense6",
+      "h": "0.05",
+      "g_up_logged": "-0.036930080",
+      "word_length": 37,
+      "source_log": "chattering_d10_dense6_0.05.log",
+      "source_sha256": "219b47dc300a9b00f2009099158a4585137984976240129397d2919ee5c93973",
+      "source_line": "lower: c = min eta(S_alpha) = -0.014617926; best explicit word (k = 37): g(h) <= -0.036930080; search up to -0.036930080"
+    },
+    {
+      "pair": "d10_dense7",
+      "h": "0.1",
+      "g_up_logged": "+0.759849273",
+      "word_length": 5,
+      "source_log": "chattering_d10_dense7_0.1.log",
+      "source_sha256": "c557be12a19cd8a4b24d7061071cf12dd13172bf9114b83050504496129a6023",
+      "source_line": "lower: c = min eta(S_alpha) = +0.769242559; best explicit word (k = 5): g(h) <= +0.759849273; search up to +0.759849273"
+    },
+    {
+      "pair": "d10_dense7",
+      "h": "0.05",
+      "g_up_logged": "+0.764443280",
+      "word_length": 10,
+      "source_log": "chattering_d10_dense7_0.05.log",
+      "source_sha256": "d6a60dde7a02f1a71de841eb803b688dfbe6423175f6eac0c553d560d2b9b6fa",
+      "source_line": "lower: c = min eta(S_alpha) = +0.769242559; best explicit word (k = 10): g(h) <= +0.764443280; search up to +0.764443280"
+    },
+    {
+      "pair": "d10_dense8",
+      "h": "0.1",
+      "g_up_logged": "+1.045459363",
+      "word_length": 29,
+      "source_log": "chattering_d10_dense8_0.1.log",
+      "source_sha256": "519f7edb474c036f9d11ea6fcae14dfe26347d63e92584f8191c0f9ff8001713",
+      "source_line": "lower: c = min eta(S_alpha) = +1.052013580; best explicit word (k = 29): g(h) <= +1.045459363; search up to +1.045459363"
+    },
+    {
+      "pair": "d10_dense8",
+      "h": "0.05",
+      "g_up_logged": "+1.048576464",
+      "word_length": 26,
+      "source_log": "chattering_d10_dense8_0.05.log",
+      "source_sha256": "d4c96e0a08b3deea316836c1355f1c9809441a1149d8147276ec4a2630a70576",
+      "source_line": "lower: c = min eta(S_alpha) = +1.052013580; best explicit word (k = 26): g(h) <= +1.048576464; search up to +1.048576464"
+    },
+    {
+      "pair": "d10_dense9",
+      "h": "0.1",
+      "g_up_logged": "-0.019725396",
+      "word_length": 16,
+      "source_log": "chattering_d10_dense9_0.1.log",
+      "source_sha256": "eeb6aa4f2c35c9ad84dae92d55c3e222cfa20cc24c46667f1468ddbad74942e0",
+      "source_line": "lower: c = min eta(S_alpha) = +0.004986292; best explicit word (k = 16): g(h) <= -0.019725396; search up to -0.019725396"
+    },
+    {
+      "pair": "d10_dense9",
+      "h": "0.05",
+      "g_up_logged": "-0.007349791",
+      "word_length": 9,
+      "source_log": "chattering_d10_dense9_0.05.log",
+      "source_sha256": "72da4f2ae8003d6f4755e98659ef26a4e4cba6defba543677fa0af689516287d",
+      "source_line": "lower: c = min eta(S_alpha) = +0.004986292; best explicit word (k = 9): g(h) <= -0.007349791; search up to -0.007349791"
+    },
+    {
+      "pair": "d10_dense10",
+      "h": "0.1",
+      "g_up_logged": "-0.193572128",
+      "word_length": 37,
+      "source_log": "chattering_d10_dense10_0.1.log",
+      "source_sha256": "726e7ac020cf6bd58227cc943a4d6b58527ae7cd154920de68d443f4b7b1450c",
+      "source_line": "lower: c = min eta(S_alpha) = -0.184297205; best explicit word (k = 37): g(h) <= -0.193572128; search up to -0.193572128"
+    },
+    {
+      "pair": "d10_dense10",
+      "h": "0.05",
+      "g_up_logged": "-0.188876192",
+      "word_length": 71,
+      "source_log": "chattering_d10_dense10_0.05.log",
+      "source_sha256": "88df3c38231f7a92840b5b943b8ce04ccd696c6f5594429222d6acc9c0fa4e39",
+      "source_line": "lower: c = min eta(S_alpha) = -0.184297205; best explicit word (k = 71): g(h) <= -0.188876192; search up to -0.188876192"
+    },
+    {
+      "pair": "d10_sparse4",
+      "h": "0.1",
+      "g_up_logged": "+0.116892919",
+      "word_length": 11,
+      "source_log": "chattering_d10_sparse4_0.1.log",
+      "source_sha256": "2df941f3ab9ddb5f75bcaf0844a477cb9fc7ba731c4a26bcdc9780a665ac3ffe",
+      "source_line": "lower: c = min eta(S_alpha) = +0.143601922; best explicit word (k = 11): g(h) <= +0.116892919; search up to +0.116892919"
+    },
+    {
+      "pair": "d10_sparse4",
+      "h": "0.05",
+      "g_up_logged": "+0.129417631",
+      "word_length": 8,
+      "source_log": "chattering_d10_sparse4_0.05.log",
+      "source_sha256": "f031da2f6ba5a7c20064ed4e501fe33a7b67da94d9df904b3d0ed39f2b783bd6",
+      "source_line": "lower: c = min eta(S_alpha) = +0.143601922; best explicit word (k = 8): g(h) <= +0.129417631; search up to +0.129417631"
+    },
+    {
+      "pair": "d10_sparse5",
+      "h": "0.1",
+      "g_up_logged": "-0.591249403",
+      "word_length": 24,
+      "source_log": "chattering_d10_sparse5_0.1.log",
+      "source_sha256": "90c3477faf4955de5713b4db6ba8f306a983d980343daaeb03465e878e760c60",
+      "source_line": "lower: c = min eta(S_alpha) = -0.583787742; best explicit word (k = 24): g(h) <= -0.591249403; search up to -0.591249403"
+    },
+    {
+      "pair": "d10_sparse5",
+      "h": "0.05",
+      "g_up_logged": "-0.587645113",
+      "word_length": 71,
+      "source_log": "chattering_d10_sparse5_0.05.log",
+      "source_sha256": "3e219f4d4e23e2cfc5ef05e2536daa365086e5ac7fe33d39b01629093e09e3f0",
+      "source_line": "lower: c = min eta(S_alpha) = -0.583787742; best explicit word (k = 71): g(h) <= -0.587645113; search up to -0.587645113"
+    },
+    {
+      "pair": "d10_sparse6",
+      "h": "0.1",
+      "g_up_logged": "-0.205900544",
+      "word_length": 11,
+      "source_log": "chattering_d10_sparse6_0.1.log",
+      "source_sha256": "da7e527ad64ab20d97c19970cc35e4935cfc8ee31b07c045fed4d21036db4023",
+      "source_line": "lower: c = min eta(S_alpha) = -0.179129374; best explicit word (k = 11): g(h) <= -0.205900544; search up to -0.205900544"
+    },
+    {
+      "pair": "d10_sparse6",
+      "h": "0.05",
+      "g_up_logged": "-0.192605915",
+      "word_length": 11,
+      "source_log": "chattering_d10_sparse6_0.05.log",
+      "source_sha256": "40f5a5b55da33d17a5f083725311bf0a37225bcec54cd228fdd7191c82df185c",
+      "source_line": "lower: c = min eta(S_alpha) = -0.179129374; best explicit word (k = 11): g(h) <= -0.192605915; search up to -0.192605915"
+    },
+    {
+      "pair": "d10_sparse7",
+      "h": "0.1",
+      "g_up_logged": "+0.073598518",
+      "word_length": 37,
+      "source_log": "chattering_d10_sparse7_0.1.log",
+      "source_sha256": "35607a4c4554069cdbe7ef23d4926df3bd5fc000da307655cae794738fac44a5",
+      "source_line": "lower: c = min eta(S_alpha) = +0.084505156; best explicit word (k = 37): g(h) <= +0.073598518; search up to +0.073598518"
+    },
+    {
+      "pair": "d10_sparse7",
+      "h": "0.05",
+      "g_up_logged": "+0.078894315",
+      "word_length": 7,
+      "source_log": "chattering_d10_sparse7_0.05.log",
+      "source_sha256": "5b823fc742e77e59a5d48928bd174bd0e7d3c38ead1083951a577bf4b42d3692",
+      "source_line": "lower: c = min eta(S_alpha) = +0.084505156; best explicit word (k = 7): g(h) <= +0.078894315; search up to +0.078894315"
+    },
+    {
+      "pair": "d10_sparse8",
+      "h": "0.1",
+      "g_up_logged": "+0.957095581",
+      "word_length": 12,
+      "source_log": "chattering_d10_sparse8_0.1.log",
+      "source_sha256": "d3ea101115ec48a0c38fb2d8c6e841e63285fdfa1a99af061b0beca151e2371b",
+      "source_line": "lower: c = min eta(S_alpha) = +0.978382245; best explicit word (k = 12): g(h) <= +0.957095581; search up to +0.957095581"
+    },
+    {
+      "pair": "d10_sparse8",
+      "h": "0.05",
+      "g_up_logged": "+0.965183014",
+      "word_length": 29,
+      "source_log": "chattering_d10_sparse8_0.05.log",
+      "source_sha256": "e4c617090fe4253ef6928a77f9a5408ed66173d4ce36c3b99179b6a7764cf6b0",
+      "source_line": "lower: c = min eta(S_alpha) = +0.978382245; best explicit word (k = 29): g(h) <= +0.965183014; search up to +0.965183014"
+    },
+    {
+      "pair": "d10_sparse9",
+      "h": "0.1",
+      "g_up_logged": "+0.569674460",
+      "word_length": 21,
+      "source_log": "chattering_d10_sparse9_0.1.log",
+      "source_sha256": "3f75edc0d9bec356ab37cc596b6318acf27558d71634bba18a88332ec13f7a84",
+      "source_line": "lower: c = min eta(S_alpha) = +0.628627079; best explicit word (k = 21): g(h) <= +0.569674460; search up to +0.569674460"
+    },
+    {
+      "pair": "d10_sparse9",
+      "h": "0.05",
+      "g_up_logged": "+0.599017390",
+      "word_length": 16,
+      "source_log": "chattering_d10_sparse9_0.05.log",
+      "source_sha256": "a9cb37dddd0c999b636d15de8e04b4210e80f8d73cc58d019866386a056c9ed9",
+      "source_line": "lower: c = min eta(S_alpha) = +0.628627079; best explicit word (k = 16): g(h) <= +0.599017390; search up to +0.599017390"
+    },
+    {
+      "pair": "d10_sparse10",
+      "h": "0.1",
+      "g_up_logged": "+0.944047765",
+      "word_length": 7,
+      "source_log": "chattering_d10_sparse10_0.1.log",
+      "source_sha256": "35db5e2bd68feb8ffacfe7ab4b95991a0a452b57520024d2d2e4662a77e401a1",
+      "source_line": "lower: c = min eta(S_alpha) = +1.002925825; best explicit word (k = 7): g(h) <= +0.944047765; search up to +0.944047765"
+    },
+    {
+      "pair": "d10_sparse10",
+      "h": "0.05",
+      "g_up_logged": "+0.973720312",
+      "word_length": 7,
+      "source_log": "chattering_d10_sparse10_0.05.log",
+      "source_sha256": "264520899d7cf1617b1c8c4899dd34b529ad0611e94d0e2e428bc29e75022c48",
+      "source_line": "lower: c = min eta(S_alpha) = +1.002925825; best explicit word (k = 7): g(h) <= +0.973720312; search up to +0.973720312"
+    },
+    {
+      "pair": "d20_dense1",
+      "h": "0.1",
+      "g_up_logged": "+0.514020229",
+      "word_length": 23,
+      "source_log": "chattering_d20_dense1_0.1.log",
+      "source_sha256": "5ca298283c72ea0896c765d0bdca3736f4bd386c9bc55ff0239f60784555876e",
+      "source_line": "lower: c = min eta(S_alpha) = +0.538290950; best explicit word (k = 23): g(h) <= +0.514020229; search up to +0.514020229"
+    },
+    {
+      "pair": "d20_dense1",
+      "h": "0.05",
+      "g_up_logged": "+0.525947123",
+      "word_length": 65,
+      "source_log": "chattering_d20_dense1_0.05.log",
+      "source_sha256": "5634efe469c9816e15e96c7bfe58dfb0e230cdb727cb1548d42a88e7d53c66a3",
+      "source_line": "lower: c = min eta(S_alpha) = +0.538290950; best explicit word (k = 65): g(h) <= +0.525947123; search up to +0.525947123"
+    },
+    {
+      "pair": "d20_dense2",
+      "h": "0.1",
+      "g_up_logged": "+0.514173868",
+      "word_length": 40,
+      "source_log": "chattering_d20_dense2_0.1.log",
+      "source_sha256": "776ca5ca1d8d6821ff7002e5f56c4aa3b67b530caba9e45e090504f129185e75",
+      "source_line": "lower: c = min eta(S_alpha) = +0.519702587; best explicit word (k = 40): g(h) <= +0.514173868; search up to +0.514173868"
+    },
+    {
+      "pair": "d20_dense2",
+      "h": "0.05",
+      "g_up_logged": "+0.516869297",
+      "word_length": 75,
+      "source_log": "chattering_d20_dense2_0.05.log",
+      "source_sha256": "545bbbdc7f7e2117c53252aa1899d5b3177e89952713a74e2d5348303a62beb6",
+      "source_line": "lower: c = min eta(S_alpha) = +0.519702587; best explicit word (k = 75): g(h) <= +0.516869297; search up to +0.516869297"
+    },
+    {
+      "pair": "d20_dense3",
+      "h": "0.1",
+      "g_up_logged": "+0.685091300",
+      "word_length": 17,
+      "source_log": "chattering_d20_dense3_0.1.log",
+      "source_sha256": "22fc515974d25b4d57b0e44a22997803765d6233aa8b45df788d0079c73e41f3",
+      "source_line": "lower: c = min eta(S_alpha) = +0.690888728; best explicit word (k = 17): g(h) <= +0.685091300; search up to +0.685091300"
+    },
+    {
+      "pair": "d20_dense3",
+      "h": "0.05",
+      "g_up_logged": "+0.687854215",
+      "word_length": 23,
+      "source_log": "chattering_d20_dense3_0.05.log",
+      "source_sha256": "521afa1eebd5928536f471803d8766b3146aed38047338d3d006ea7b45286b7c",
+      "source_line": "lower: c = min eta(S_alpha) = +0.690888728; best explicit word (k = 23): g(h) <= +0.687854215; search up to +0.687854215"
+    },
+    {
+      "pair": "d20_sparse1",
+      "h": "0.1",
+      "g_up_logged": "+0.524682941",
+      "word_length": 10,
+      "source_log": "chattering_d20_sparse1_0.1.log",
+      "source_sha256": "34101d5a5cc4d792ffbf9dbfdf5751143a5237f3d4fabcf03da52265beb15550",
+      "source_line": "lower: c = min eta(S_alpha) = +0.557883322; best explicit word (k = 10): g(h) <= +0.524682941; search up to +0.524682941"
+    },
+    {
+      "pair": "d20_sparse1",
+      "h": "0.05",
+      "g_up_logged": "+0.541162330",
+      "word_length": 2,
+      "source_log": "chattering_d20_sparse1_0.05.log",
+      "source_sha256": "7c57654223d2f5c31ba981e33048ba84f0843da2209644f2af820ad3df95187e",
+      "source_line": "lower: c = min eta(S_alpha) = +0.557883322; best explicit word (k = 2): g(h) <= +0.541162330; search up to +0.541162330"
+    },
+    {
+      "pair": "d20_sparse2",
+      "h": "0.1",
+      "g_up_logged": "+0.884727735",
+      "word_length": 2,
+      "source_log": "chattering_d20_sparse2_0.1.log",
+      "source_sha256": "bb92f64c8368b51140d71ead429695eeb87537661799459d11a0ad61ba6ee512",
+      "source_line": "lower: c = min eta(S_alpha) = +0.928955202; best explicit word (k = 2): g(h) <= +0.884727735; search up to +0.884727735"
+    },
+    {
+      "pair": "d20_sparse2",
+      "h": "0.05",
+      "g_up_logged": "+0.906156351",
+      "word_length": 8,
+      "source_log": "chattering_d20_sparse2_0.05.log",
+      "source_sha256": "206bf82f37b22c45b3478aa809e1cf92209e8d9a07c2c875a3990bd794a1ac62",
+      "source_line": "lower: c = min eta(S_alpha) = +0.928955202; best explicit word (k = 8): g(h) <= +0.906156351; search up to +0.906156351"
+    }
+  ]
+}

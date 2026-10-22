@@ -258,9 +258,12 @@ end
 info = jsondecode(fileread(fullfile(root, 'data', 'scaling_pairs_journal_info.json')));
 key = arrayfun(@(I) 1e4 * I.d + 100 * strcmp(I.kind, 'sparse') + str2double(regexprep(I.id, '.*[a-z]', '')), info);
 [~, ord] = sort(key); info = info(ord);
+W = jsondecode(fileread(fullfile(root, 'results', 'larger_samples', 'scaling_word_estimates.json')));
 say(''); say('## Chattering pairs (Table 9)'); say('');
-say('| d | pair | c | lower 0.1 | upper 0.1 | lower 0.05 | upper 0.05 | width | |V| (0.1) |');
-say('|---|---|---|---|---|---|---|---|---|');
+say('Explicit-word estimates are floating point, from scaling_word_estimates.json (original log excerpts); rounded upward to six decimals.');
+say('');
+say('| d | pair | c | lower 0.1 | g(h) <= 0.1 | upper 0.1 | lower 0.05 | upper 0.05 | width | vertices (0.1) |');
+say('|---|---|---|---|---|---|---|---|---|---|');
 tex{end + 1} = '% Table 9 (tab:scalingnew)';
 C = struct('d', {}, 'width', {});
 for q = 1:numel(info)
@@ -272,10 +275,13 @@ for q = 1:numel(info)
     if isfile(f5), L5 = jsondecode(fileread(f5)); lo5 = str2double(L5.lambda_lower); end
     dag = lo1 > lo5; lo5b = max(lo1, lo5);
     U1 = jsondecode(fileread(fullfile(cc, [pid '_0.1.json']))); U5 = jsondecode(fileread(fullfile(cc, [pid '_0.05.json'])));
+    W1 = W.records(strcmp({W.records.pair}, pid) & strcmp({W.records.h}, '0.1'));
+    assert(isscalar(W1), 'larger_samples:wordEstimate', 'Missing or duplicated word estimate for %s', pid);
+    gup = ceil6(str2double(W1.g_up_logged));
     w = c - max(lo1, lo5);
-    say('| %d | %s %s | %s%s | %.6f | %s | %.6f%s | %s | %s | %d |', I.d, I.kind, k, B.printed, mk(cm), lo1, U1.printed, ...
+    say('| %d | %s %s | %s%s | %.6f | %.6f | %s | %.6f%s | %s | %s | %d |', I.d, I.kind, k, B.printed, mk(cm), lo1, gup, U1.printed, ...
         lo5b, mk(ifelse(dag, 'dagger', '')), U5.printed, wtxt(w), nverts(L1));
-    tex{end + 1} = sprintf('%d & %s %s & %s & %s & %s & %s & %s & %s\\\\', I.d, I.kind, k, texnum(c, cm), texnum(lo1, ''), ...
+    tex{end + 1} = sprintf('%d & %s %s & %s & %s & %s & %s & %s & %s & %s\\\\', I.d, I.kind, k, texnum(c, cm), texnum(lo1, ''), texnum(gup, ''), ...
                            texnum(str2double(U1.printed), ''), texnum(lo5b, ifelse(dag, '\dagger', '')), ...
                            texnum(str2double(U5.printed), ''), wtex(w)); %#ok<AGROW>
     C(end + 1) = struct('d', I.d, 'width', w); %#ok<AGROW>

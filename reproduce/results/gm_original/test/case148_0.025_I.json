@@ -1,0 +1,1 @@
+{"group":"test","pair":"case148","h":"0.025","side":"I","variant":"adaptive","lamhat":0,"sc":1,"lo":0.91597553773491425,"hi":0.97003082033668875,"bound":-1.2358031944968229,"other":-3.6692884822172012,"depth":14,"products":26132,"nV":3,"secs":116.54247670833334,"status":"budget","delta":6.2500000000000015E-5,"M":20000,"tmax":7200,"code":"subradius_computation@181d6b5"}

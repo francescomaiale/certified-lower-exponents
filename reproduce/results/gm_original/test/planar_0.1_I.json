@@ -1,0 +1,1 @@
+{"group":"test","pair":"planar","h":"0.1","side":"I","variant":"adaptive","lamhat":0,"sc":1,"lo":0.98695839640383209,"hi":0.9879583964038321,"bound":-0.12188371129795872,"other":-0.13213934491755008,"depth":10,"products":158,"nV":9,"secs":6.59220925,"status":"converged","delta":0.0010000000000000002,"M":20000,"tmax":7200,"code":"subradius_computation@181d6b5"}
