@@ -1,5 +1,5 @@
 function P = paper_data()
-% PAPER_DATA  The pairs of paper B and the recorded settings needed to rebuild its certified bounds.
+%  The pairs of the paper and the recorded settings needed to rebuild its certified bounds.
 %   P.pairs.<name>  {A_1, A_2}: string matrices of the decimals printed in the paper (App. A for the test pairs;
 %                   the switching pairs of Table 3 are the shortest decimals of their binary64 entries).
 %   P.table2        rows of Table 2: pair, h, level (the level at which the paper's search closed), seeds,
