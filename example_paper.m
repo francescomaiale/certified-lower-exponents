@@ -1,10 +1,11 @@
-%% EXAMPLE_PAPER  Rebuild Table 2 and the initial Table 3 closures of paper B.
+%% This script can be used to rebuild Table 2 and the initial Table 3 closures of paper B.
+
 % The stronger extended-search bounds marked + in the revised Table 3 are checked by the replays in reproduce/;
 % rebuilding those searches needs table3_extended (and, for some seeds, the external GM run outputs).
 % Each lower bound is rebuilt by one closure at the level recorded in paper_data.m and then checked in exact
 % arithmetic; each upper bound is re-certified from the recorded word (Table 2) or schedule (Table 3).
 % quick = true skips the long rows: case 1 at h = 0.025 (about an hour), and the Table 3 rows with d = 10 or
-% h = 0.05.  The quick run takes about 20 minutes on one core; the full run several hours.
+% h = 0.05. The quick run takes about 20 minutes on one core; the full run several hours.
 
 here = fileparts(mfilename('fullpath'));
 addpath(genpath(fullfile(here, 'src')));
