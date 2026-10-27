@@ -1,12 +1,12 @@
-%% EXAMPLE_CUSTOM  Certified bounds for the lower exponent of your own positive switched system x' = A_sigma(t) x.
-% Edit the data block below and run the script.  Every printed bound is certified in exact rational arithmetic,
+%% This script can be used to certify bounds for the lower exponent of your own positive switched system x' = A_sigma(t) x.
+% Edit the data block below and run the script. Every printed bound is certified in exact rational arithmetic,
 % for both readings of the data (the decimals as written, and the binary64 numbers they round to).
 
 here = fileparts(mfilename('fullpath'));
 addpath(genpath(fullfile(here, 'src')));
 
 %% Data
-% Metzler matrices (off-diagonal entries >= 0), all of the same size.  Strings give exact decimals; plain numbers
+% Metzler matrices (off-diagonal entries >= 0), all of the same size. Strings give exact decimals; plain numbers
 % are read as their shortest decimal (0.3 -> 3/10).
 A = { ["-1"   "0.5"  "0"
        "0"    "-2"   "1"
