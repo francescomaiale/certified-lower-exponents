@@ -48,9 +48,8 @@ Each script adds `src/` to the path itself.
 | `paper_data.m` | The pairs of the paper, written as their decimals, and the recorded levels, words and schedules that `example_paper.m` starts from. |
 | `reproduce/` | Table and figure drivers, 568 replayable certificates, MATLAB replays and independent Python replays. Algorithm (L) tangent bounds are checked exactly when computed but have no stored replay certificates. See `reproduce/README.md`. |
 
-The reproduction README includes a [numbering guide](reproduce/README.md#paper-numbering-and-stable-filenames)
-for historical driver names and archived reports. Current references distinguish the main paper from Tables S1-S6
-in its numerical supplement.
+The reproduction README [links each paper item to its driver and stored outputs](reproduce/README.md#paper-items-and-drivers).
+References distinguish the main paper from Tables S1-S6 in its numerical supplement.
 
 ## Verification
 
