@@ -1,12 +1,12 @@
 """(Documentation copy in the paper-B MATLAB package; see README.md in this folder.)
 
-Larger samples of Obs. 4.7 and 4.8 (journal version): the paper's random streams, continued.
+Larger samples of Obs. 4.8 (journal version): the paper's random streams, continued.
 
 Switching pairs (Obs. 4.8): find_pairs.py draws pair k of dimension d from the stream default_rng([2027, d, k]) and
 keeps the qualifying draws in draw order, so the first ten per dimension are the paper's sw5_1..sw5_10 and
 sw10_1..sw10_10.  Here: the first 30 qualifying draws for d = 5 and 10, and the first 5 for d = 20.
 
-Chattering pairs (Obs. 4.7): gen_families.py draws from one stream default_rng(2026), three dense and three sparse pairs
+Chattering pairs (Obs. 4.8): gen_families.py draws from one stream default_rng(2026), three dense and three sparse pairs
 for d = 5, then for d = 10.  Here the stream is replayed (the first twelve pairs are checked against
 data/scaling_pairs.json) and continued: seven more pairs of each kind for d = 5 and d = 10 (ten of each kind, twenty per
 dimension), then three dense and two sparse pairs for d = 20.  For every pair we also record whether an optimized

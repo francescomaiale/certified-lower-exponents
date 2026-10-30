@@ -1,5 +1,5 @@
 function T = comp38_reducible_pairs(varargin)
-% COMP38_REDUCIBLE_PAIRS  Computation 3.8 (obs:cone): the reducible test pairs, cases 77, 148, 677, 1195, 1440.
+% COMP38_REDUCIBLE_PAIRS  Computation 3.9 (obs:cone): the reducible test pairs, cases 77, 148, 677, 1195, 1440.
 %   - Invariant faces (both orientations): every proper face F_J invariant under some mode, with an exact lower
 %     bound for its exponent eta(A_i[J,J]) (Collatz-Wielandt with a nonnegative eigenvector), against a certified
 %     upper bound for the chattering value c >= lambda_check (Collatz-Wielandt at a rational alpha); binary64 data.
@@ -17,7 +17,7 @@ function T = comp38_reducible_pairs(varargin)
 p = inputParser; p.addParameter('replay', true); p.parse(varargin{:}); o = p.Results;
 root = paperB_root(); cdir = fullfile(root, 'certificates', 'comp38');
 say = logger(fullfile(root, 'results', 'comp38.md'));
-say('# Computation 3.8 (obs:cone): the reducible test pairs, MATLAB reproduction');
+say('# Computation 3.9 (obs:cone): the reducible test pairs, MATLAB reproduction');
 say('');
 say('## Invariant faces (binary64 data), both orientations');
 say('');

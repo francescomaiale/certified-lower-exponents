@@ -1,5 +1,5 @@
 function T = fig1_work_precision(varargin)
-% FIG1_WORK_PRECISION  Obs. 4.12 (obs:wp) and Figure 1 (fig:wp): certified error U - (certified lower bound)
+% FIG1_WORK_PRECISION  Obs. 4.9 (obs:glp) and Figure 2 (fig:wp): certified error U - (certified lower bound)
 % against computing time, for our Euler closure and the naive Algorithm (L), on three pairs (port of wp.py and
 % wp_plot.py).
 %   Pairs and fixed certified upper bounds U: case 1440 (two-segment schedule, 0.345674607), pair 4 in dimension 5 of
@@ -82,7 +82,7 @@ end
 
 function T = plot_wp(root, rdir, U)
 say = logger(fullfile(root, 'results', 'fig1.md'));
-say('# Figure 1 (fig:wp): work and precision, MATLAB reproduction (times depend on the machine)');
+say('# Figure 2 (fig:wp): work and precision, MATLAB reproduction (times depend on the machine)');
 say('');
 say('| pair | method | h or tau | certified lower | error U - lower | time (s) |');
 say('|---|---|---|---|---|---|');

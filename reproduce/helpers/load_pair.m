@@ -3,11 +3,11 @@ function [A, names, file] = load_pair(file, name)
 %   A = load_pair(file, name) returns a cell array {A_1, ..., A_m} of d x d string matrices for the entry "name"
 %   of a JSON file of the form {"name": [A_1, A_2, ...], ...}.  file is a path or one of the shortcuts
 %     'test'       data/test_pairs.json       planar, sharp, case1, case77, case148, case677, case1195, case1440
-%     'scaling'    data/scaling_pairs.json    d5_dense1, ..., d10_sparse3 (Obs. 4.7)
+%     'scaling'    data/scaling_pairs.json    d5_dense1, ..., d10_sparse3 (Obs. 4.8)
 %     'switching'  data/switching_pairs.json  sw5_1, ..., sw10_10 (Obs. 4.8)
-%     'bcv'        data/bcv13.json            bcv13 (Ex. 4.10)
+%     'bcv'        data/bcv13.json            bcv13 (Ex. 4.6)
 %     'switching_journal'  data/switching_pairs_journal.json  sw5_11, ..., sw10_30, sw20_1, ..., sw20_5 (larger sample, Obs. 4.8)
-%     'scaling_journal'    data/scaling_pairs_journal.json    d5_dense4, ..., d20_sparse2 (larger sample, Obs. 4.7)
+%     'scaling_journal'    data/scaling_pairs_journal.json    d5_dense4, ..., d20_sparse2 (larger sample, Obs. 4.8)
 %   jsondecode would turn the entries into doubles and lose their decimal reading, so the numbers are taken from
 %   the raw text.  [~, names] = load_pair(file) lists the names; the third output is the resolved path.
 %   With name omitted and a single output, A is a struct mapping every name to its matrices.

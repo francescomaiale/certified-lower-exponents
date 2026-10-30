@@ -1,6 +1,6 @@
 function T = table4_best_brackets(varargin)
 % TABLE4_BEST_BRACKETS  Table 4 (tab:glp), our columns: best certified lower bound, best implicit Euler bound,
-% certified upper bound for c or two-segment schedule, and width; Obs. 4.11 (obs:glp), upper side.
+% certified upper bound for c or two-segment schedule, and width; Obs. 4.9 (obs:glp), upper side.
 %   T = table4_best_brackets('part', 'certify')   certify c (Collatz-Wielandt at a rational alpha) for all 16 pairs,
 %                                                 and the two-segment schedules of cases 1440 and 148 (exponential
 %                                                 enclosures), both data readings; replay each certificate

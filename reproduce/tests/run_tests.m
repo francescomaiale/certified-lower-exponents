@@ -16,10 +16,10 @@ function results = run_tests(opts)
 %   (g)     exact-arithmetic helpers (parse_rationals, dec2rat, limit_denominator, fmt_dec, exact_min, exp/log bounds)
 %   (h)     chattering and schedule certificates (certify_best_upper / replay_best_upper), with tampering
 %   (i)     prop:polytope(ii): a polytope certified at h = 0.1 re-certified at h = 0.05; table certificates
-%   (j)     Computation 3.8: invariant faces, the case-148 cone, the case-77 polygon, with tampering
+%   (j)     Computation 3.9: invariant faces, the case-148 cone, the case-77 polygon, with tampering
 %   (k)     Algorithm (L) at the paper's shift (planar, tau = 0.1) and the tangent bound
 %   (l)     Table 1 row (ex:sharp, h = 0.1) and the Perron seeds of Obs. 4.8 (switching pair 4, h = 0.1)
-%   (n)     a three-mode schedule (Ex. 4.10), a driver in search mode
+%   (n)     a three-mode schedule (Ex. 4.6), a driver in search mode
 %   (m)     no material of the companion paper: no identifier of its headline case in any file, no such number
 %           outside digit strings in sources, data and documents, and every certificate refers to a pair of data/
 
@@ -57,7 +57,7 @@ rp = certified_bracket(Ap, '0.1', o);
 check('(a) replays of the new certificates VALID', replay_lower(rp.lower_cert, Ap) && replay_upper(rp.upper_cert, Ap));
 check('(a) lower <= lambda_check <= upper', rp.lower_value <= lam_p && lam_p <= rp.upper_value, ...
       sprintf('%s <= %.10f <= %s', rp.lower, lam_p, rp.upper));
-check('(a) lower beats -0.281832 (the estimate of Table 5)', rp.lower_value > -0.281832, rp.lower);
+check('(a) lower beats -0.281832 (the estimate of Table S1)', rp.lower_value > -0.281832, rp.lower);
 check('(a) lower within 2e-6 of the paper -0.272230', abs(rp.lower_value + 0.272230) <= 2e-6, ...
       sprintf('%s, |V| = %d', rp.lower, rp.search.nV));
 check('(a) upper = paper -0.123619 with the same word (k = 31, up to rotation)', strcmp(rp.upper, '-0.123619') && ...
@@ -195,7 +195,7 @@ check('(i) the h = 0.1 polytope certifies at h = 0.05 at least its h = 0.1 bound
       str2double(out.lambda) >= rp.lower_value, sprintf('%s >= %s', out.lambda, rp.lower));
 out = run_lower_row(Ap, '0.1', struct('name', 'planar', 'kind', 'table', 'level', (1 - 0.1 * 0.281832) * (1 + 1e-9), ...
                     'lambda_claim', '-0.281832', 'file', fullfile(outdir, 'planar_0.1_table.json')));
-check('(i) table certificate of -0.281832 (the estimate of Table 5; planar, h = 0.1)', out.replay_ok && strcmp(out.lambda, '-0.281832'), ...
+check('(i) table certificate of -0.281832 (the estimate of Table S1; planar, h = 0.1)', out.replay_ok && strcmp(out.lambda, '-0.281832'), ...
       sprintf('|V| = %d', out.nV));
 threw = false;
 try
@@ -205,8 +205,8 @@ catch
 end
 check('(i) a claim above the exact level of the polytope is refused', threw);
 
-%% (j) Computation 3.8
-fprintf('\n---- (j) Computation 3.8: faces and cones\n');
+%% (j) Computation 3.9
+fprintf('\n---- (j) Computation 3.9: faces and cones\n');
 F = struct('case', 'case1195', 'orientations', {{invariant_faces(load_pair('test', 'case1195'), 'A')}});
 fh = fullfile(outdir, 'faces_case1195.json'); write_text(fh, jsonencode(F));
 check('(j) case 1195: the only invariant proper face {2,3} is slow (>= -0.289318 > c)', F.orientations{1}.all_slow && ...
@@ -265,7 +265,7 @@ Ab = load_pair('bcv', 'bcv13');
 [R, json] = certify_best_upper(Ab, struct('id', 'bcv13', 'chatter', false, ...
                                           'schedule', struct('modes', [3 2 1], 'durations', {{'30', '30', '30'}})));
 fh = fullfile(outdir, 'bcv13_schedule.json'); write_text(fh, json);
-check('(n) Ex. 4.10: three-mode schedule certified lambda_check <= -0.299986; replay VALID', strcmp(R.printed, '-0.299986') && ...
+check('(n) Ex. 4.6: three-mode schedule certified lambda_check <= -0.299986; replay VALID', strcmp(R.printed, '-0.299986') && ...
       replay_best_upper(fh), R.printed);
 cs = fullfile(outdir, 'search'); 
 table2_test_pairs('mode', 'search', 'rows', {'planar_0.1'}, 'part', 'lower', 'cdir', cs, 'pmax', 2000, 'maxprobes', 30);

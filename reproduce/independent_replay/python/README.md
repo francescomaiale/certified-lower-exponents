@@ -8,8 +8,8 @@ certifiers. They share no code with MATLAB; they read the pairs from `../../data
 | `replay_lower.py` | polytope certificates (Prop. 4.3) | `replay_one` of `certify_lower.py`, with validation |
 | `replay_upper.py` | implicit Euler chains (Prop. 4.4) | `replay_one` of `certify_upper.py`, with validation |
 | `replay_best_upper.py` | chattering and schedule bounds | `replay` of `certify_best_upper.py` (uniformization, no logarithms), extended to schedules with more than two segments |
-| `replay_cones.py` | invariant cones of Computation 3.8 | `replay` of `euler_cone.py` and `euler_cone_boundary.py` |
-| `replay_faces.py` | invariant faces of Computation 3.8 | new (the paper's script printed a log only) |
+| `replay_cones.py` | invariant cones of Computation 3.9 | `replay` of `euler_cone.py` and `euler_cone_boundary.py` |
+| `replay_faces.py` | invariant faces of Computation 3.9 | new (the paper's script printed a log only) |
 | `run_all.py` | every certificate under `../../certificates` | dispatches by the fields of each file |
 
 Requirements: Python 3 with NumPy (tested with Python 3.12 and the version pinned in the root `requirements.txt`). Usage:

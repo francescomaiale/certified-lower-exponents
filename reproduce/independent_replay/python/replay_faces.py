@@ -1,4 +1,4 @@
-"""Independent Python replay of the invariant-face certificates of Computation 3.8 (certificates/comp38/faces_*.json,
+"""Independent Python replay of the invariant-face certificates of Computation 3.9 (certificates/comp38/faces_*.json,
 written by the MATLAB function invariant_faces).  New code (the paper's Python 'faces' subcommand printed a log and had
 no separate replay); it shares nothing with the MATLAB certifier.
 

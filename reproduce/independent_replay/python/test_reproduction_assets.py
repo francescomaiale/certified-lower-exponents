@@ -1,4 +1,4 @@
-"""Check original GM assets and the floating-point Table 9 provenance/export."""
+"""Check original GM assets and the floating-point Table S5 provenance/export."""
 import hashlib
 import json
 from decimal import Decimal, ROUND_CEILING

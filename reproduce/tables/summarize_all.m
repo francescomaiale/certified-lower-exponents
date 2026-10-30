@@ -1,6 +1,6 @@
 function summarize_all()
 % SUMMARIZE_ALL  Rebuild every summary in results/ from the certificates and run outputs that exist (no new
-% computation, except the tangent bounds of Obs. 4.11 if missing): results/table2.md, table7.md, table3.md, table4.md,
+% computation, except the tangent bounds of Obs. 4.9 if missing): results/table2.md, table7.md, table3.md, table4.md,
 % algorithm_l.md, fig1.md and fig1_wp.pdf.  Rows not yet computed show as missing.
 table2_test_pairs('part', 'summary');
 table7_scaling('part', 'summary');

@@ -1,5 +1,5 @@
 function [alpha, alpha_float, info] = tangent_bound(V, A, versions)
-% TANGENT_BOUND  Exact tangent-cone lower bound alpha(Q) of [GLP, Prop. 8] for Q = conv V + K (Obs. 4.11).
+% TANGENT_BOUND  Exact tangent-cone lower bound alpha(Q) of [GLP, Prop. 8] for Q = conv V + K (Obs. 4.9).
 %   [alpha, alpha_float] = tangent_bound(V, A) with V a d x n vertex matrix (doubles: their exact binary64
 %   values are used) and A the data (cell of decimal-string or numeric matrices).  alpha (sym) is the largest
 %   rational alpha certified such that, at every vertex w and for every mode i, A_i w - alpha w lies in

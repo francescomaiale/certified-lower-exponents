@@ -1,5 +1,5 @@
 function R = glp_algorithm_l(A, tau, opts)
-% GLP_ALGORITHM_L  Naive Algorithm (L) of Guglielmi, Laglia and Protasov [GLP, Sec. 4.6] (Obs. 4.11).
+% GLP_ALGORITHM_L  Naive Algorithm (L) of Guglielmi, Laglia and Protasov [GLP, Sec. 4.6] (Obs. 4.9).
 %   R = glp_algorithm_l(A, tau, opts)
 %     A     cell {A_1, ..., A_m} (decimal strings or numeric); tau dwell time (double)
 %     opts  L       exhaustion length (16, 14, 12 for d <= 3, d = 5, d = 10)

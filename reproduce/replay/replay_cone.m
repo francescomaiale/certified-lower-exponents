@@ -1,5 +1,5 @@
 function [ok, msgs, info] = replay_cone(C, A)
-% REPLAY_CONE  Independent exact re-check of an invariant-cone certificate (certify_cone; Computation 3.8).
+% REPLAY_CONE  Independent exact re-check of an invariant-cone certificate (certify_cone; Computation 3.9).
 %   [ok, msgs, info] = replay_cone(C, A)
 %     C  certificate (.json file, JSON text or decoded struct); A data (optional; default from data/*.json)
 %   Shares no code with certify_cone (port of the 'replay' subcommands of euler_cone.py and euler_cone_boundary.py):

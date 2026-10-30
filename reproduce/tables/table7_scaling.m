@@ -1,5 +1,5 @@
 function T = table7_scaling(varargin)
-% TABLE7_SCALING  Obs. 4.7 (obs:scaling) and Table 8 (tab:scaling): certified brackets for the random pairs in
+% TABLE7_SCALING  Obs. 4.8 (obs:scaling) and Table S4 (tab:scaling): certified brackets for the random pairs in
 % dimensions 5 and 10 with apparent chattering behavior (a numerical classification) (data/scaling_pairs.json).
 %   T = table7_scaling('mode', 'reproduce')   (default) each lower bound by one closure at the level where the
 %                                             paper's 30-minute bisection last closed (data/paper_search_results.json)
@@ -7,7 +7,7 @@ function T = table7_scaling(varargin)
 %                                             word) with machine-independent caps ('pmax', 'maxprobes')
 %   Options: 'cdir' (certificate folder, e.g. a scratch folder for a search-mode run), 'pairs' (cellstr, default all 12), 'hs' ({'0.1', '0.05'}), 'part' ('lower', 'upper', 'summary',
 %   'all'), 'force', 'replay'.  Certificates: certificates/scaling/<pair>_<h>_best.json and <pair>_<h>.json.
-%   Summary: results/table7.md (Table 8, d = 5) and the d = 10 statements of Obs. 4.7.
+%   Summary: results/table7.md (Table S4, d = 5) and the d = 10 statements of Obs. 4.8.
 %
 %   Long: every lower row has 1100 to 2800 vertices; in reproduce mode a d = 5 row takes 5 to 20 minutes and a d = 10
 %   row 20 to 60 minutes (closure, exact check, replay), single thread.
@@ -73,7 +73,7 @@ say = logger(fullfile(root, 'results', 'table7.md'));
 P = {'d5_dense1', '-0.222751', '-0.204815', '-0.209005', 1755; 'd5_dense2', '-0.059850', '-0.000609', '-0.014798', 1391;
      'd5_dense3', '0.222107', '0.242747', '0.237887', 1146;   'd5_sparse1', '-0.107049', '0.029982', '-0.001609', 1118;
      'd5_sparse2', '-0.641285', '-0.092940', '-0.097694', 1802; 'd5_sparse3', '-0.071028', '0.170806', '0.112334', 1454};
-say('# Table 8 (tab:scaling): random pairs in dimension 5, MATLAB reproduction');
+say('# Table S4 (tab:scaling): random pairs in dimension 5, MATLAB reproduction');
 say('');
 say('| pair (c) | h | lower (MATLAB) | lower (paper) | g(h) <= (GM run, paper) | upper (MATLAB) | upper (paper) | width | |V| MATLAB / paper | match |');
 say('|---|---|---|---|---|---|---|---|---|---|');

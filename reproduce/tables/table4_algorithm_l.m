@@ -1,5 +1,5 @@
 function T = table4_algorithm_l(varargin)
-% TABLE4_ALGORITHM_L  Obs. 4.11 (obs:glp) and the Alg. (L) columns of Table 4: the naive Algorithm (L) of
+% TABLE4_ALGORITHM_L  Obs. 4.9 (obs:glp) and the Alg. (L) columns of Table 4: the naive Algorithm (L) of
 % Guglielmi, Laglia and Protasov on the 15 pairs (all but case 148), tau = 0.1 and 0.05 (glp_algorithm_l), and the
 % tangent bound on our polytopes (planar pair at every step, case 1 at h = 0.1).
 %   'mode', 'reproduce'  (default) a single closure at the shift nu found by the paper's search

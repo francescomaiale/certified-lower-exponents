@@ -2,7 +2,7 @@ function R = gm_fixed_job(group, pid, h_str, side, variant, varargin)
 % GM_FIXED_JOB  One run of the algorithm of Guglielmi and Maiale (fixed code, github.com/francescomaiale/
 % subradius_computation at commit 181d6b5) on an Euler family, for the reruns of paper B, App. B.
 %   gm_fixed_job(group, pid, h_str, side, variant)
-%     group    'test' (Table 5), 'scaling' (Table 6 / Obs. B.1), 'switching' (Table 7 / Obs. 4.8), 'fixed' (Cor. 4.1)
+%     group    'test' (Table S1), 'scaling' (Table S2 / Obs. B.1), 'switching' (Table S3 / Obs. 4.8), 'fixed' (Cor. 4.1)
 %     side     'E' (explicit family, lower estimate) or 'I' (implicit family, upper estimate)
 %     variant  'adaptive' (adaptive_subradius_comp) or 'fixed' (lsr_comp, the fixed antinorm of Cor. 4.1)
 %   Settings as in the paper: transposed families, delta = h^2/10, V = coordinate vectors, at most 2e4 products,

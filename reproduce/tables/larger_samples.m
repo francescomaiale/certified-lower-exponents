@@ -1,5 +1,5 @@
 function T = larger_samples(varargin)
-% LARGER_SAMPLES  The larger samples of Obs. 4.7 and 4.8 (Tables 9 and 10): the random streams of the paper continued
+% LARGER_SAMPLES  The larger samples of Obs. 4.8 (Tables S5 and S6): the random streams of the paper continued
 % (generators/gen_pairs_ext.py; data/switching_pairs_journal.json and scaling_pairs_journal.json, with *_info.json).
 %   'part'
 %     'switching'   per pair (default all 45): 'upper', the optimized two-segment schedule (rational durations),
@@ -9,14 +9,14 @@ function T = larger_samples(varargin)
 %                   if no level below 0.1 closed, eps up to 0.2 with 300 s per closure on B_h^T (as Table 3)
 %     'chattering'  per pair (default all 33): 'upper', the chattering value certified by Collatz-Wielandt (and a
 %                   two-segment schedule if one beats it); '0.1', '0.05', certified_bracket (probe 300 s, budget
-%                   1800 s, 20000 vertices: the protocol of Table 8)
+%                   1800 s, 20000 vertices: the protocol of Table S4)
 %     'extended'    the extended search (helpers/extended_search_row.m, without vertex sets of [GM]) on the d = 10
 %                   switching rows of the 'switching' records that stopped at eps >= 1e-2 or found none, both
 %                   orientations; at h = 0.05 the best certified h = 0.1 polytope of the orientation (switching or
 %                   extended) is a seed and a baseline.  Run it after 'switching'; the h = 0.1 rows go first.
 %     'replay'      certificates/larger_switching and larger_scaling: MATLAB replay_all (about 10 hours on one
 %                   thread) and the Python replay (15 minutes)
-%     'summary'     (default) Tables 9 and 10 and the counts of Obs. 4.7 and 4.8 from the stored certificates and run
+%     'summary'     (default) Tables S5 and S6 and the counts of Obs. 4.8 from the stored certificates and run
 %                   records: results/larger_samples.md and results/larger_samples_tables.tex
 %   Options: 'pairs' (cell of names), 'steps' ({'upper', '0.1', '0.05'}), 'rdir' (records and certificates of a run;
 %   default results/larger_samples/run, so that a run never overwrites the stored ones), 'cap' (extended search,
@@ -213,18 +213,18 @@ cs = fullfile(root, 'certificates', 'larger_switching'); cc = fullfile(root, 'ce
 rs = fullfile(root, 'results', 'larger_samples');
 say = logger(fullfile(root, 'results', 'larger_samples.md'));
 tex = {};
-say('# Larger samples of Obs. 4.7 and 4.8 (Tables 9 and 10)');
+say('# Larger samples of Obs. 4.8 (Tables S5 and S6)');
 say('');
 say('From the stored certificates (certificates/larger_switching, larger_scaling) and run records');
 say('(results/larger_samples).  Switching pairs: direct certificates at each step, as in Table 3; T = transposed family,');
 say('+ = extended search.  Chattering pairs: at h = 0.05 the larger of the direct certificate and the h = 0.1 bound');
-say('(dagger, prop:polytope(ii)), as in Table 8.  Widths: upper (schedule, or c) minus the larger lower bound of the two');
+say('(dagger, prop:polytope(ii)), as in Table S4.  Widths: upper (schedule, or c) minus the larger lower bound of the two');
 say('steps, rounded up to two digits.  LaTeX rows: results/larger_samples_tables.tex.');
 % ------------------------------------------------------------------------- switching
 info = jsondecode(fileread(fullfile(root, 'data', 'switching_pairs_journal_info.json')));
 num = arrayfun(@(I) str2double(I.id(find(I.id == '_') + 1:end)), info);
 [~, ord] = sortrows([[info.d].', num(:)]); info = info(ord);
-say(''); say('## Switching pairs (Table 10)'); say('');
+say(''); say('## Switching pairs (Table S6)'); say('');
 say('| d | pair | c | upper | g(0.1) <= | g(0.1) >= | g(0.05) <= | g(0.05) >= | width |');
 say('|---|---|---|---|---|---|---|---|---|');
 S = struct('d', {}, 'eps01', {}, 'eps005', {}, 'width', {});
@@ -259,7 +259,7 @@ info = jsondecode(fileread(fullfile(root, 'data', 'scaling_pairs_journal_info.js
 key = arrayfun(@(I) 1e4 * I.d + 100 * strcmp(I.kind, 'sparse') + str2double(regexprep(I.id, '.*[a-z]', '')), info);
 [~, ord] = sort(key); info = info(ord);
 W = jsondecode(fileread(fullfile(root, 'results', 'larger_samples', 'scaling_word_estimates.json')));
-say(''); say('## Chattering pairs (Table 9)'); say('');
+say(''); say('## Chattering pairs (Table S5)'); say('');
 say('Explicit-word estimates are floating point, from scaling_word_estimates.json (original log excerpts); rounded upward to six decimals.');
 say('');
 say('| d | pair | c | lower 0.1 | g(h) <= 0.1 | upper 0.1 | lower 0.05 | upper 0.05 | width | vertices (0.1) |');

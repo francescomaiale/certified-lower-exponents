@@ -1,12 +1,12 @@
 function run_all(profile)
 % RUN_ALL  Reproduce the computations of the paper, in order.
-%   run_all('quick')   (default) everything that takes minutes: Table 1, Computation 3.8, Table 2 without its
-%                      longest row (case 1 at h = 0.025), the Table 4 certificates, Ex. 4.10, the d = 5 rows of
-%                      Obs. 4.7 at h = 0.1, Obs. 4.8 for d = 5 at h = 0.1
+%   run_all('quick')   (default) everything that takes minutes: Table 1, Computation 3.9, Table 2 without its
+%                      longest row (case 1 at h = 0.025), the Table 4 certificates, Ex. 4.6, and the original
+%                      d = 5 scaling and switching pairs of Obs. 4.8 at h = 0.1
 %   run_all('full')    the original suite with the paper's settings (hours; see README.md).
 %                      Run table3_transposed, table3_extended and larger_samples separately.
-%   The runs of the algorithm of Guglielmi and Maiale (App. B) are not part of this repository; their code is at
-%   https://github.com/francescomaiale/subradius_computation.
+%   The optional Gripenberg runs of Appendix B and Tables S1-S3 use gm/gm_fixed_job; see gm/README.md.
+%   They are bundled with this repository but run separately from this driver.
 %   Most certificate drivers skip files that already exist; the rate searches and the BCV driver run again. The summaries
 %   are written to results/*.md.
 
@@ -15,15 +15,15 @@ if ~ismember(string(profile), ["quick", "full"]), error('run_all:profile', 'prof
 full = strcmp(profile, 'full');
 t0 = tic;
 fprintf('== Table 1\n'); table1_sandwich();
-fprintf('== Computation 3.8\n'); comp38_reducible_pairs();
+fprintf('== Computation 3.9\n'); comp38_reducible_pairs();
 fprintf('== Table 2\n');
 rows = {'planar_0.1', 'planar_0.05', 'planar_0.025', 'planar_0.0125', 'case1_0.1', 'case1_0.05', ...
         'case1440_0.1', 'case1440_0.05', 'case1440_0.025', 'case148_0.1', 'case148_0.05', 'case148_0.025'};
 if full, rows{end + 1} = 'case1_0.025'; end
 table2_test_pairs('rows', rows, 'part', 'lower'); table2_test_pairs('rows', rows, 'part', 'transfer');
 table2_test_pairs('part', 'upper'); table2_test_pairs('part', 'summary');
-fprintf('== Ex. 4.10\n'); ex410_bcv();
-fprintf('== Obs. 4.7 / Table 8\n');
+fprintf('== Ex. 4.6\n'); ex410_bcv();
+fprintf('== Obs. 4.8 / Table S4\n');
 if full
     table7_scaling();
 else
@@ -41,9 +41,9 @@ else
     table3_switching('pairs', arrayfun(@(k) sprintf('sw5_%d', k), 1:10, 'UniformOutput', false), 'hs', {'0.1'}, ...
                      'part', 'all');
 end
-fprintf('== Obs. 4.9 / Table 11\n'); table8_rates();
+fprintf('== Appendix C / Table 5\n'); table8_rates();
 if full
-    fprintf('== Fig. 1\n'); fig1_work_precision();
+    fprintf('== Fig. 2\n'); fig1_work_precision();
 end
 fprintf('== done in %.0f s; summaries in results/*.md\n', toc(t0));
 end

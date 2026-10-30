@@ -1,5 +1,5 @@
 function R = ex410_bcv(varargin)
-% EX410_BCV  Ex. 4.10 (ex:bcv): the three-mode benchmark of Blanchini, Colaneri and Valcher (CDC 2013), eps = 1/10
+% EX410_BCV  Ex. 4.6 (ex:bcv): the three-mode benchmark of Blanchini, Colaneri and Valcher (CDC 2013), eps = 1/10
 % (port of bcv_benchmark.py).
 %   - c = min over the simplex of eta(S_alpha) (floating point; the paper: 1/120);
 %   - Computation: the cyclic schedule A_3, A_2, A_1 with dwell time 30 in each mode, certified with exponential
@@ -18,7 +18,7 @@ root = paperB_root();
 if ~isempty(o.outdir), root = char(o.outdir); end
 say = logger(fullfile(root, 'results', 'ex410.md'));
 A = load_pair('bcv', 'bcv13'); Af = cellfun(@str2double, A, 'UniformOutput', false);
-say('# Ex. 4.10 (ex:bcv): the three-mode benchmark, MATLAB reproduction');
+say('# Ex. 4.6 (ex:bcv): the three-mode benchmark, MATLAB reproduction');
 say('');
 % chattering value over the simplex (floating point)
 eta = @(al) max(real(eig(al(1) * Af{1} + al(2) * Af{2} + al(3) * Af{3})));

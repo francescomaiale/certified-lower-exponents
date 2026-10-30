@@ -1,7 +1,7 @@
 """Independent Python replay of the certified chattering and schedule bounds: replay() of certify_best_upper.py
 (uniformization enclosures, no logarithms), applied to given files.  Extended, in a backward-compatible way, to
 schedules with more than two segments (fields 'modes' and 'durations', as written by the MATLAB certifier for the
-three-mode example of Ex. 4.10) and to certificates without a chattering part.
+three-mode example of Ex. 4.6) and to certificates without a chattering part.
 
 Usage: python3 replay_best_upper.py FILE [FILE ...]
 """

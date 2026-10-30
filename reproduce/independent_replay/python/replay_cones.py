@@ -1,4 +1,4 @@
-"""Independent Python replay of the invariant cones of Computation 3.8: the 'replay' subcommands of euler_cone.py
+"""Independent Python replay of the invariant cones of Computation 3.9: the 'replay' subcommands of euler_cone.py
 (polygons of cases 77 and 677) and euler_cone_boundary.py (the cut cone of case 148), merged and applied to the
 certificate files written by the MATLAB certifier (fields case, kind, orientation, h1, vertices, classes).
 

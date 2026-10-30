@@ -1,12 +1,12 @@
 function T = table1_sandwich()
-% TABLE1_SANDWICH  Table 1 (tab:sandwich) and Obs. 3.11 (obs:sandwich): the Euler sandwich in floating point for the
-% symmetric pair of Ex. 3.9 (eps = 0.2) and the asymmetric planar pair (port of sandwich_explore.py).
+% TABLE1_SANDWICH  Table 1 (tab:sandwich) and Obs. 3.13 (obs:sandwich): the Euler sandwich in floating point for the
+% symmetric pair of Ex. 3.10 (eps = 0.2) and the asymmetric planar pair (port of sandwich_explore.py).
 %   For h = 0.2, 0.1, 0.05, 0.025, 0.0125 and all words of length <= 16:
 %     g_est = (min_w rho(B_w)^(1/|w|) - 1)/h     (an estimate of g(h) from products, not a bound),
 %     G_up  = (1 - 1/min_w rho(R_w)^(1/|w|))/h   (the bound of thm:implicit(i) for the best word),
 %     exact schedule: the rate log rho(prod e^{h A_i}) / (h |w|) of that best implicit word as a schedule.
-%   For the symmetric pair, g(h) and G(h) are known exactly (Ex. 3.9) and printed for comparison.  Also the slope
-%   (G - g)/h against the prediction h u'(sum alpha_i (A_i - S)^2) v of Obs. 3.11(a).  Output: results/table1.md.
+%   For the symmetric pair, g(h) and G(h) are known exactly (Ex. 3.10) and printed for comparison.  Also the slope
+%   (G - g)/h against the prediction h u'(sum alpha_i (A_i - S)^2) v of Obs. 3.13.  Output: results/table1.md.
 %   Runtime: about a minute.
 
 root = paperB_root();
@@ -53,7 +53,7 @@ for q = 1:2
         pred = u.' * (a * (A{1} - S)^2 + (1 - a) * (A{2} - S)^2) * v;
         obs = (T(end).vals(2) - T(end).vals(1)) / hs(end);
         say('');
-        say('Obs. 3.11: planar pair, c = min_alpha eta(S_alpha) = %.10f at alpha* = %.4f (paper: -0.1949763083, 0.3905);', ...
+        say('Obs. 3.13: planar pair, c = min_alpha eta(S_alpha) = %.10f at alpha* = %.4f (paper: -0.1949763083, 0.3905);', ...
             c, a);
         say('predicted slope of G - g: %.3f (paper 1.478); observed (G_up - g_est)/h at h = %g: %.3f (paper 1.472).', ...
             pred, hs(end), obs);

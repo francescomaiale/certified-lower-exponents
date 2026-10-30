@@ -15,10 +15,39 @@ estimates, mixture minimizations and rate diagnostics remain floating point, as 
   every smaller step (Prop. 4.3(ii));
 * upper bounds by implicit Euler chains, `(I - h A_{w_j}) x_j >= x_{j-1}` (Prop. 4.4), by an upper bound for the chattering value
   (Collatz-Wielandt at a rational `alpha`) and by periodic schedules (entrywise enclosures of `e^{tA}`);
-* the invariant faces and invariant cones of Computation 3.8.
+* the invariant faces and invariant cones of Computation 3.9.
 
 The replayable certificates are written as JSON files and re-checked by a **replay that shares no code with the certifier**
 (`replay/`), and by the **independent Python replays** derived from the paper's scripts (`independent_replay/python/`).
+
+## Paper numbering and stable filenames
+
+References in this documentation and the driver help text follow the current MCSS manuscript.
+Tables S1-S6 are in the numerical supplement; unprefixed tables and figures are in the main paper.
+Both scaling and switching samples are now in Numerical observation 4.8; rate diagnostics are in Appendix C,
+and the Algorithm (L) and work-precision comparisons are in Numerical observation 4.9.
+
+Filenames, driver names and archived result records retain their original names so existing commands and
+certificate paths remain valid. The source labels in parentheses identify the same mathematical results
+across revisions. In particular:
+
+| historical item or filename | current paper location |
+|---|---|
+| Computation 3.8; `comp38_reducible_pairs` | Computation 3.9 |
+| Example 3.9; Numerical observation 3.11 | Example 3.10; Numerical observation 3.13 |
+| Numerical observations 4.6, 4.7, 4.8 | Numerical observation 4.7 (test brackets), 4.8 (scaling and switching) |
+| Numerical observation 4.9; Table 11; `table8_rates` | Appendix C; Table 5 |
+| Example 4.10; `ex410_bcv` | Example 4.6 |
+| Numerical observations 4.11-4.12; Figure 1; `fig1_work_precision` | Numerical observation 4.9; Figure 2 |
+| Tables 5-10 | Supplementary Tables S1-S6, respectively |
+| `table7_scaling`; `results/table7.md` | Supplementary Table S4 |
+| `larger_samples` (historical Tables 9-10) | Supplementary Tables S5-S6 |
+| Remark 3.13; Appendix E; Lemma E.1 | Remark 3.14; Appendix D; Lemma D.1 |
+
+The verified computational snapshot cited in the paper remains commit `8f9cd63893fd724631dedeaa944e80b52149671f`.
+Its numerical data and certificates are unchanged. Archived reports keep their original headings;
+the LaTeX export markers `% Table 9 (tab:scalingnew)` and `% Table 10 (tab:switchingnew)` are also retained
+as stable parsing anchors for Tables S5 and S6.
 
 ## Requirements
 
@@ -72,21 +101,21 @@ sessions. Summaries go to `results/*.md`, logs to `results/logs/`.
 | `tests` | `run_tests`, `run_validation_tests` and fixtures (certificates produced by the paper's Python scripts) |
 | `data` | the pairs, as JSON (below) |
 | `certificates` | the 568 certificates of the paper's bounds, one folder per driver (`appB_*`: Appendix B, see the last section; `table3_extended`, `larger_*`: the extended search and the larger samples) |
-| `results` | summaries (`*.md`), Figure 1, and the run outputs of Algorithm (L), Figure 1, the transposed family, the extended search (`table3_extended/`) and the larger samples (`larger_samples/`, with `MANIFEST.txt`) |
+| `results` | summaries (`*.md`), Figure 2, and the run outputs of Algorithm (L), Figure 2, the transposed family, the extended search (`table3_extended/`) and the larger samples (`larger_samples/`, with `MANIFEST.txt`) |
 | `independent_replay/python` | Independent replays derived from the paper's Python code, with certificate validation, run on the MATLAB certificates |
 | `generators` | the Python generators of the random pairs (documentation only) |
-| `tools` | `make_paper_data.py`, which writes `../paper_data.m` from `data/` and `certificates/`; `check_rate_theorem.py`, the floating-point checks of Thm. 3.12 (App. E) |
+| `tools` | `make_paper_data.py`, which writes `../paper_data.m` from `data/` and `certificates/`; `check_rate_theorem.py`, the floating-point checks of Thm. 3.12 (App. D) |
 
 ## Data (`data/`)
 
 | file | content |
 |---|---|
-| `test_pairs.json` | `planar` (Obs. 3.11), `sharp` (Ex. 3.9 with eps = 0.2), `case1`, `case77`, `case148`, `case677`, `case1195`, `case1440` (Appendix A, digit for digit) |
-| `scaling_pairs.json`, `scaling_pairs_info.json` | the twelve random pairs of Obs. 4.7 (`d5_dense1`, ..., `d10_sparse3`), and their generator outputs (eta(A_i), c, alpha*) |
+| `test_pairs.json` | `planar` (Obs. 3.13), `sharp` (Ex. 3.10 with eps = 0.2), `case1`, `case77`, `case148`, `case677`, `case1195`, `case1440` (Appendix A, digit for digit) |
+| `scaling_pairs.json`, `scaling_pairs_info.json` | the twelve random pairs of Obs. 4.8 (`d5_dense1`, ..., `d10_sparse3`), and their generator outputs (eta(A_i), c, alpha*) |
 | `switching_pairs.json`, `switching_pairs_info.json` | the twenty pairs of Obs. 4.8 (`sw5_1`, ..., `sw10_10`), and c, alpha* and the best two-segment schedule found |
-| `switching_pairs_journal.json`, `switching_pairs_journal_info.json` | the larger sample of Obs. 4.8 (Table 10): `sw5_11`, ..., `sw5_30`, `sw10_11`, ..., `sw10_30`, `sw20_1`, ..., `sw20_5` (load_pair shortcut `'switching_journal'`) |
-| `scaling_pairs_journal.json`, `scaling_pairs_journal_info.json` | the larger sample of Obs. 4.7 (Table 9): `d5_dense4`, ..., `d10_sparse10`, `d20_dense1`, ..., `d20_sparse2` (shortcut `'scaling_journal'`); the info also records whether a two-segment schedule beats the numerical value of c |
-| `bcv13.json` | the three-mode example of Ex. 4.10 |
+| `switching_pairs_journal.json`, `switching_pairs_journal_info.json` | the larger sample of Obs. 4.8 (Table S6): `sw5_11`, ..., `sw5_30`, `sw10_11`, ..., `sw10_30`, `sw20_1`, ..., `sw20_5` (load_pair shortcut `'switching_journal'`) |
+| `scaling_pairs_journal.json`, `scaling_pairs_journal_info.json` | the larger sample of Obs. 4.8 (Table S5): `d5_dense4`, ..., `d10_sparse10`, `d20_dense1`, ..., `d20_sparse2` (shortcut `'scaling_journal'`); the info also records whether a two-segment schedule beats the numerical value of c |
+| `bcv13.json` | the three-mode example of Ex. 4.6 |
 | `paper_search_results.json` | outputs of the paper's floating-point searches (see "Reproduce and search modes") |
 
 The matrices are stored as JSON numbers, exactly as printed: six-decimal data for the planar pair and case 1, and
@@ -119,20 +148,20 @@ Runtimes are single-threaded, on a 16-core Apple-silicon Mac under load, in repr
 
 | paper item | driver | output | runtime | status |
 |---|---|---|---|---|
-| Table 1, Obs. 3.11 | `table1_sandwich` | `results/table1.md` | 1 min | all 10 rows |
-| Computation 3.8 | `comp38_reducible_pairs` | `certificates/comp38`, `results/comp38.md` | 1 min | all statements (see below) |
-| Table 2, Rem. 4.5, Obs. 4.6 | `table2_test_pairs` | `certificates/table2`, `results/table2.md` | 15 min (+10 min for case 1 at h = 0.025) | all 13 rows |
-| Table 4 (ours), Obs. 4.11 | `table4_best_brackets` | `certificates/table4`, `results/table4.md` | 1 min (+ Table 2 and the scaling driver) | our columns: all 16 pairs |
-| Table 4 (Alg. (L)), Obs. 4.11 | `table4_algorithm_l` | `results/glp`, `results/algorithm_l.md` | hours | all printed cells (7 of the 29 runs differ from the earlier Python runs; see below) |
-| Obs. 4.7, Table 8 | `table7_scaling` | `certificates/scaling`, `results/table7.md` | hours | all 24 rows |
+| Table 1, Obs. 3.13 | `table1_sandwich` | `results/table1.md` | 1 min | all 10 rows |
+| Computation 3.9 | `comp38_reducible_pairs` | `certificates/comp38`, `results/comp38.md` | 1 min | all statements (see below) |
+| Table 2, Rem. 4.5, Obs. 4.7 | `table2_test_pairs` | `certificates/table2`, `results/table2.md` | 15 min (+10 min for case 1 at h = 0.025) | all 13 rows |
+| Table 4 (ours), Obs. 4.9 | `table4_best_brackets` | `certificates/table4`, `results/table4.md` | 1 min (+ Table 2 and the scaling driver) | our columns: all 16 pairs |
+| Table 4 (Alg. (L)), Obs. 4.9 | `table4_algorithm_l` | `results/glp`, `results/algorithm_l.md` | hours | all printed cells (7 of the 29 runs differ from the earlier Python runs; see below) |
+| Obs. 4.8, Table S4 | `table7_scaling` | `certificates/scaling`, `results/table7.md` | hours | all 24 rows |
 | Obs. 4.8, Table 3 (B_h) | `table3_switching` | `certificates/switching`, `results/table3.md` | hours | all 20 rows |
 | Obs. 4.8, Table 3 (transposed family) | `table3_transposed` | `certificates/table3_transposed`, `results/table3_transposed.md` | 2 hours (7 processes) | all 23 rows |
 | Obs. 4.8, Table 3 (extended search, marked +) | `table3_extended` | `certificates/table3_extended`, `results/table3_extended.md` | summary 1 min; runs up to 3.5 hours per row | all 8 bounds marked + and the d = 10 widths |
-| Obs. 4.7 and 4.8, Tables 9 and 10 (larger samples) | `larger_samples` | `certificates/larger_switching`, `certificates/larger_scaling`, `results/larger_samples.md`, `results/larger_samples_tables.tex` | summary 1 min; runs about 14 hours (12 to 16 processes) | all 78 rows |
-| Obs. 4.9, Table 11 | `table8_rates` | `results/table8.md` | 30 min | all 14 rows |
-| Thm. 3.12, Rem. 3.13, App. E (floating-point checks) | `tools/check_rate_theorem.py` (Python, numpy and scipy) | `results/check_rate_theorem.md` | 2 min | Q for all 14 pairs of Table 11; the remainder of Lemma E.1; the identity of Rem. 3.13 |
-| Ex. 4.10 | `ex410_bcv` | `certificates/bcv`, `results/ex410.md` | 10 min | all values |
-| Obs. 4.12, Fig. 1 | `fig1_work_precision` | `results/wp`, `results/fig1_wp.pdf`, `results/fig1.md` | hours | our 12 points; Alg. (L): 9 of 12 points (see below) |
+| Obs. 4.8, Tables S5 and S6 (larger samples) | `larger_samples` | `certificates/larger_switching`, `certificates/larger_scaling`, `results/larger_samples.md`, `results/larger_samples_tables.tex` | summary 1 min; runs about 14 hours (12 to 16 processes) | all 78 rows |
+| Appendix C, Table 5 | `table8_rates` | `results/table8.md` | 30 min | all 14 rows |
+| Thm. 3.12, Rem. 3.14, App. D (floating-point checks) | `tools/check_rate_theorem.py` (Python, numpy and scipy) | `results/check_rate_theorem.md` | 2 min | Q for all 14 pairs of Table 5; the remainder of Lemma D.1; the identity of Rem. 3.14 |
+| Ex. 4.6 | `ex410_bcv` | `certificates/bcv`, `results/ex410.md` | 10 min | all values |
+| Obs. 4.9, Fig. 2 | `fig1_work_precision` | `results/wp`, `results/fig1_wp.pdf`, `results/fig1.md` | hours | our 12 points; Alg. (L): 9 of 12 points (see below) |
 
 
 "Status" counts the paper's printed numbers that the MATLAB run reproduces digit for digit (`results/*.md` compare
@@ -142,13 +171,13 @@ Python replays (`independent_replay/python/run_all.py`).
 ### What each driver reproduces
 
 * **Table 1** (`table1_sandwich`): g_est, G_up and the exact-schedule rate for both planar pairs and all five steps;
-  Obs. 3.11: c = -0.1949763083 at alpha* = 0.3905 and the predicted slope 1.478.
-* **Computation 3.8** (`comp38_reducible_pairs`): for cases 77, 148, 677, 1195 and 1440, in both orientations, the
+  Obs. 3.13: c = -0.1949763083 at alpha* = 0.3905 and the predicted slope 1.478.
+* **Computation 3.9** (`comp38_reducible_pairs`): for cases 77, 148, 677, 1195 and 1440, in both orientations, the
   invariant proper faces with exact exponent bounds and the certified bound for c (`faces_<case>.json`); the cone
-  of case 148 (transposed, h_C = 1/5, kappa = 1/20; the certificate field retains the historical name `h1`) with its support classes (all nonempty subsets but {3}), touching
+  of case 148 (transposed, h_C = 1/5, beta = 1/20; the certificate field retains the historical name `h1`) with its support classes (all nonempty subsets but {3}), touching
   only the slow face {1,3}; the invariant polygons of cases 77 (21 vertices, coordinates >= 0.0796, as in the paper)
   and 677 (see the differences below).
-* **Table 2, Rem. 4.5, Obs. 4.6** (`table2_test_pairs`): every lower and upper bound and every width; the transfer
+* **Table 2, Rem. 4.5, Obs. 4.7** (`table2_test_pairs`): every lower and upper bound and every width; the transfer
   certificates of Prop. 4.3(ii) (case 148 at h = 0.05, 0.025 from the h = 0.1 polytope; case 1440 at h = 0.025 from
   the h = 0.05 polytope); g(0.1) in [-1.044234, -1.044232] for case 1; the case-148 polytope has 1836 vertices,
   none on the axis of e_2; lambda_min <= (A_2)_22 < -1.368009. The polytopes have 169 to 3131 vertices.
@@ -156,7 +185,7 @@ Python replays (`independent_replay/python/run_all.py`).
   certified upper bound for c or for a two-segment schedule (c for 14 pairs, schedules for cases 1440 and 148), and the
   widths; the tangent bound on our planar and case-1 polytopes. The Alg. (L) lower bounds are exact (both data
   readings) but, as in the paper, they are not stored as certificates and not replayed independently.
-* **Obs. 4.7, Table 8** (`table7_scaling`): the 24 lower and 24 upper certificates for the twelve random pairs
+* **Obs. 4.8, Table S4** (`table7_scaling`): the 24 lower and 24 upper certificates for the twelve random pairs
   (d = 5, 10; h = 0.1, 0.05).
 * **Obs. 4.8, Table 3** (`table3_switching`, `table3_transposed`): the twenty certified schedules, the
   Perron-seeded lower certificates on B_h (33 rows) and on the transposed family (23 rows: those that closed only at
@@ -168,23 +197,23 @@ Python replays (`independent_replay/python/run_all.py`).
   the certificates of the printed bounds in `certificates/table3_extended`). Its seeds include, on the transposed family
   at h = 0.1, the seven original final vertex sets in `results/gm_original/switching`, used by default.
   Pass `'gm_dir', folder` to override them, or `'gm_dir', ''` to explicitly omit that seed.
-* **Obs. 4.7 and 4.8, Tables 9 and 10** (`larger_samples`): for the 45 further switching pairs, the certified
+* **Obs. 4.8, Tables S5 and S6** (`larger_samples`): for the 45 further switching pairs, the certified
   schedules and the lower bounds at both steps (both orientations, and the extended search on the d = 10 rows); for
   the 33 further chattering pairs, the certified upper bound for c (a schedule for `d10_sparse8`), the lower bounds
-  and the implicit Euler bounds at both steps, plus the floating-point explicit-word estimates at h = 0.1; the counts and widths quoted in Obs. 4.7 and 4.8. Part `'summary'`
+  and the implicit Euler bounds at both steps, plus the floating-point explicit-word estimates at h = 0.1; the counts and widths quoted in Obs. 4.8. Part `'summary'`
   rebuilds both tables, as LaTeX rows identical to the paper's, from the stored certificates and `results/larger_samples/scaling_word_estimates.json` (original nine-decimal log estimates,
   with excerpts and source hashes); parts `'switching'`,
   `'chattering'` and `'extended'` rerun the computations (into `results/larger_samples/run/`).
-* **Obs. 4.9, Table 11** (`table8_rates`): alpha*, Q and the observed gap and separate slopes for all 14 pairs; the deviations and the
+* **Appendix C, Table 5** (`table8_rates`): alpha*, Q and the observed gap and separate slopes for all 14 pairs; the deviations and the
   midpoint accuracy (0.83 h^2); the extrapolation remark for switching pair 4 (-0.4270 above -0.4301).
   `results/rate_search_results.json` retains the original unrounded Python search diagnostics used for the separate
   slopes in the revised table. Its alpha*, Q and gap columns agree with the MATLAB summary to all printed digits.
   Word searches estimate the discrete minima from above; neither the gap nor its midpoint proves optimality.
-* **Ex. 4.10** (`ex410_bcv`): a numerical mixture search returning approximately 1/120; the certified schedule bound lambda_check <= -0.299986 (dwell times
+* **Ex. 4.6** (`ex410_bcv`): a numerical mixture search returning approximately 1/120; the certified schedule bound lambda_check <= -0.299986 (dwell times
   30 in A_3, A_2, A_1); g(h) >= -0.313030 (h = 0.1) and -0.306335 (h = 0.05), approached by the block words to six
   digits; the closures finish at g = -1.01 and not at g = -0.99. The revised paper proves the exact exponent
   lambda_check = -0.3 and lsr(B_h) = ((1-h)(1+0.1*h))^(1/3) for 0 < h < 1.
-* **Fig. 1, Obs. 4.12** (`fig1_work_precision`): our certified lower bounds at h = 0.2, 0.1, 0.05, 0.025 for the three
+* **Fig. 2, Obs. 4.9** (`fig1_work_precision`): our certified lower bounds at h = 0.2, 0.1, 0.05, 0.025 for the three
   pairs, identical to the paper's to all printed digits (the word searches and the closures at fixed levels are
   deterministic); the Algorithm (L) points and all times depend on the machine.
 
@@ -195,7 +224,7 @@ Python replays (`independent_replay/python/run_all.py`).
 | polytope (`*_best.json`, `*_transfer.json`, `*_table.json`) | `certify_lower_exact` | `lsr(B_h) >= t`, hence `lambda_check >= (t - 1)/h` (Prop. 4.3) | `replay_lower` | `replay_lower.py` (replay_one of `certify_lower.py`) |
 | implicit Euler chain (`<pair>_<h>.json`) | `certify_upper_exact` | `lambda_check <= (1 - 1/r)/h` (Prop. 4.4) | `replay_upper` (uses only `I - h A_i`) | `replay_upper.py` (`certify_upper.py`) |
 | chattering / schedule (`*_best_upper.json`, `*_schedule.json`) | `certify_best_upper` | `lambda_check <= c` or `<= log rho(Phi)/T` | `replay_best_upper` (uniformization, no logarithms) | `replay_best_upper.py` (`certify_best_upper.py`) |
-| invariant faces (`faces_*.json`) | `invariant_faces` | `lambda_J >= L_J`, `c <= U` (Computation 3.8) | `replay_faces` | `replay_faces.py` |
+| invariant faces (`faces_*.json`) | `invariant_faces` | `lambda_J >= L_J`, `c <= U` (Computation 3.9) | `replay_faces` | `replay_faces.py` |
 | invariant cones (`cone_*.json`, `polygon_*.json`) | `certify_cone` (facet normals) | `(I + h_1 A_i) C` in `C` | `replay_cone` (fan triangulation) | `replay_cones.py` (`euler_cone*.py`) |
 
 Each lower certificate stores the exact vertices, for every (mode, vertex) pair the exact weights, the exact level
@@ -253,20 +282,20 @@ python3 independent_replay/python/run_all.py
 The paper's computations were first made with a Python implementation. Where this MATLAB code gives a different value,
 the paper prints the MATLAB value, so the drivers reproduce every printed number of the tables. The values that changed:
 
-1. **Algorithm (L) (Table 4, Obs. 4.11).** Its lower bound is the tangent bound of the polytope closed at the shift
+1. **Algorithm (L) (Table 4, Obs. 4.9).** Its lower bound is the tangent bound of the polytope closed at the shift
    nu, and that polytope depends on the LP solver (MATLAB's HiGHS through `linprog` instead of scipy's). It differed
-   in 7 of the 29 runs, changing five cells and two widths of Table 4; the comparison of Obs. 4.11 is unchanged.
-2. **Computation 3.8, case 677.** MATLAB's `convhull` treats nearly collinear points differently from Qhull; with the
+   in 7 of the 29 runs, changing five cells and two widths of Table 4; the comparison of Obs. 4.9 is unchanged.
+2. **Computation 3.9, case 677.** MATLAB's `convhull` treats nearly collinear points differently from Qhull; with the
    inflation factor 5e-5 the driver gets an exactly invariant polygon of 53 vertices with coordinates at least 0.1137.
-3. **Computation 3.8, rounding.** The face {1,3} of the transposed case 148 has exponent at least 0.147542 (the
+3. **Computation 3.9, rounding.** The face {1,3} of the transposed case 148 has exponent at least 0.147542 (the
    Python run had rounded 0.147542811 to nearest).
-4. **Obs. 3.11(a)** (the slope 1.470) and **Obs. 4.9** (the median deviation 0.15%).
+4. **Obs. 3.13** (the slope 1.470) and **Appendix C** (the archived median deviation 0.15%).
 
 Quantities that depend on the machine and are not part of any claim:
 
 5. **Vertex counts and times.** Polytope sizes and running times depend on the LP solver and the machine. The times
    printed in Sec. 4 are those of the Python implementation; reproduce mode does not bisect.
-6. **Fig. 1, Algorithm (L) points.** These runs are limited by a wall-clock budget (1200 s of closures), so their
+6. **Fig. 2, Algorithm (L) points.** These runs are limited by a wall-clock budget (1200 s of closures), so their
    results depend on the machine; our 12 points are identical to the paper's.
 
 ## Appendix B comparisons

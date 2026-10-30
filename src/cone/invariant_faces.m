@@ -1,6 +1,6 @@
 function F = invariant_faces(A, orient)
 % INVARIANT_FACES  Invariant faces of K = R^d_+ with exact exponent bounds, against a certified bound for c
-% (Computation 3.8).
+% (Computation 3.9).
 %   F = invariant_faces(A, orient)
 %     A       cell {A_1, A_2} of decimal-string or numeric matrices; the binary64 values are used (as in the paper)
 %     orient  'A' (family as given) or 'T' (transposed family, same g and lambda_check by prop:cone(iv))

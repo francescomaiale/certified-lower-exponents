@@ -24,7 +24,7 @@ R = gm_fixed_job('test', 'case1', '0.1', 'E', 'adaptive');
 R = gm_fixed_job('fixed', 'case1', '0.1', 'E', 'fixed');
 ```
 
-Groups are `test` (Table 5), `scaling` (Table 6), `switching` (Table 7) and `fixed` (Corollary 4.1).
+Groups are `test` (Table S1), `scaling` (Table S2), `switching` (Table S3) and `fixed` (Corollary 4.1).
 Use side `E` for explicit or `I` for implicit Euler, and variant `adaptive` or `fixed`.
 Defaults preserve the paper's transposed families, coordinate initialization, normalization, delta = h^2/10,
 product budget 20000 and caps of 7200, 1800, 1800 and 3600 seconds respectively. Start MATLAB with
@@ -54,4 +54,4 @@ its `gm_dir` option can override their directory or explicitly omit them with an
 need not return the same vertices, runtime or final estimate as the original runs.
 
 Run `run_gm_tests` after `addpath('reproduce'); startup_reproduce` for wrapper and saved-seed checks. The Python
-regression suite also checks the original asset hashes and the restored Table 9 column.
+regression suite also checks the original asset hashes and the restored Table S5 column.

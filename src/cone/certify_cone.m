@@ -1,6 +1,6 @@
 function [C, info] = certify_cone(V, A, orient, h1, opts)
 % CERTIFY_CONE  Exact check that a polyhedral cone in R^3_+ is invariant under the Euler maps I + h1 A_i
-% (prop:cone, cor:eulerface; Computation 3.8).
+% (prop:cone, cor:eulerface; Computation 3.9).
 %   [C, info] = certify_cone(V, A, orient, h1, opts)
 %     V       3 x n generators of the cone (sym, or doubles taken as exact binary64 values), any order
 %     A       cell {A_1, ..., A_m} (decimal strings or numeric); the binary64 values are used, as in the paper

@@ -1,5 +1,5 @@
 function [ok, msgs, info] = replay_faces(C, A)
-% REPLAY_FACES  Independent exact re-check of an invariant-face certificate (invariant_faces; Computation 3.8).
+% REPLAY_FACES  Independent exact re-check of an invariant-face certificate (invariant_faces; Computation 3.9).
 %   [ok, msgs, info] = replay_faces(C, A)
 %     C  certificate (.json file, JSON text or decoded struct) with fields case and orientations (one entry per
 %        orientation, as written by comp38_reducible_pairs); A data (optional; default from data/*.json)

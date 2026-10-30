@@ -1,4 +1,4 @@
-"""Numerical check of the rate-constant theorem (easy half) for paper B, Obs. 4.9 / Table 11.
+"""Numerical check of the rate-constant theorem (easy half) for paper B, Appendix C / Table 5.
 
 Claim (two modes, interior chattering minimizer alpha*, S = S_alpha* irreducible, u^T S = eta u^T, S v = eta v,
 u^T v = 1, F = A_1 - A_2, Q = alpha*_1 alpha*_2 u^T F^2 v): along a balanced word w of period q with frequency beta,
@@ -41,7 +41,7 @@ def chatter(A1, A2):
 def constants(A1, A2, a):
     S = a * A1 + (1 - a) * A2; e, u, v = perron(S); F = A1 - A2
     QB = a * (1 - a) * (u @ F @ F @ v)
-    Q_alt = u @ (a * A1 @ A1 + (1 - a) * A2 @ A2) @ v - e ** 2          # Obs. 4.9's form
+    Q_alt = u @ (a * A1 @ A1 + (1 - a) * A2 @ A2) @ v - e ** 2          # equivalent form in Theorem 3.12
     QA = 0.5 * (u @ (F @ (F @ S - S @ F) - (F @ S - S @ F) @ F) @ v)   # paper A's high-frequency quantity
     h2 = 1e-4                                                           # eta'' by central differences
     d2 = (eta((a + h2) * A1 + (1 - a - h2) * A2) - 2 * eta(S) + eta((a - h2) * A1 + (1 - a + h2) * A2)) / h2 ** 2
@@ -77,9 +77,9 @@ def main():
                0.4656, 1.5941]
     say("# Rate-constant theorem (easy half): numerical check")
     say()
-    say("## 1. Q against Table 11")
+    say("## 1. Q against Table 5")
     say()
-    say("| pair | alpha*_1 | c | Q = a(1-a) u'F^2v | Obs. 4.9 form | Table 11 | eta'' | paper A's Q |")
+    say("| pair | alpha*_1 | c | Q = a(1-a) u'F^2v | Theorem 3.12 form | Table 5 | eta'' | paper A's Q |")
     say("|---|---|---|---|---|---|---|---|")
     info = {}
     for (name, (A1, A2)), q11 in zip(pairs, table11):

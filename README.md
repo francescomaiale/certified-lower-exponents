@@ -42,11 +42,15 @@ Each script adds `src/` to the path itself.
 | `src/pipeline` | `certified_bracket`: the whole pipeline for one step `h` (searches, then exact certificates). |
 | `src/lower` | `polytope_closure` (closure of seed vectors at a level t), `polytope_search` (bisection over t), `perron_seeds`, `lp_antinorm`, and `certify_lower_exact` (the exact check of Prop. 4.3). |
 | `src/upper` | `word_search` / `brute_words` (word search), `certify_upper_exact` (Prop. 4.4), `chattering_value`, `best_schedule`, and `certify_best_upper` with its enclosures `exp_upper` / `log_upper`. |
-| `src/cone` | Invariant faces and invariant cones (Computation 3.8). |
-| `src/glp` | A simple implementation of Algorithm (L) of Guglielmi, Laglia and Protasov, used for the comparison of Obs. 4.11. |
+| `src/cone` | Invariant faces and invariant cones (Computation 3.9). |
+| `src/glp` | A simple implementation of Algorithm (L) of Guglielmi, Laglia and Protasov, used for the comparison of Obs. 4.9. |
 | `src/core` | Exact data readings (`exact_data`), rational helpers, decimal formatting. |
 | `paper_data.m` | The pairs of the paper, written as their decimals, and the recorded levels, words and schedules that `example_paper.m` starts from. |
 | `reproduce/` | Table and figure drivers, 568 replayable certificates, MATLAB replays and independent Python replays. Algorithm (L) tangent bounds are checked exactly when computed but have no stored replay certificates. See `reproduce/README.md`. |
+
+The reproduction README includes a [numbering guide](reproduce/README.md#paper-numbering-and-stable-filenames)
+for historical driver names and archived reports. Current references distinguish the main paper from Tables S1-S6
+in its numerical supplement.
 
 ## Verification
 

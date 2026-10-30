@@ -1,5 +1,5 @@
 function T = table3_switching(varargin)
-% TABLE3_SWITCHING  Table 3 (tab:switching) and Obs. 4.8 (obs:switching): random pairs on which switching beats
+% TABLE3_SWITCHING  Table 3 (tab:switching) and Obs. 4.8 (obs:scaling): random pairs on which switching beats
 % chattering (data/switching_pairs.json).
 %   Lower bounds (prop:polytope), for h = 0.1 and 0.05: the word w = 1^a 2^b with a, b within 4 of t1/h, t2/h (the
 %   best two-segment schedule found) minimizing rho(B_w)^(1/|w|) gives g(h) <= g_up (floating point); the closure is

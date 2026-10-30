@@ -1,5 +1,5 @@
 function T = table2_test_pairs(varargin)
-% TABLE2_TEST_PAIRS  Table 2 (tab:gripenberg), Remark 4.5 (rem:certified) and Obs. 4.6: certified Euler brackets
+% TABLE2_TEST_PAIRS  Table 2 (tab:gripenberg), Remark 4.5 (rem:certified) and Obs. 4.7: certified Euler brackets
 % for the planar pair and cases 1, 1440 and 148.
 %   T = table2_test_pairs('mode', 'reproduce')     (default) every lower bound is rebuilt by one closure at the level
 %                                                   where the paper's bisection last closed
@@ -141,7 +141,7 @@ say('case 1440: h = 0.05), which holds here by prop:polytope(ii); the transfer c
 say('directly at this step (certificates/table2/<row>_transfer.json).');
 % Remark 4.5 details
 say('');
-say('## Remark 4.5 and Obs. 4.6');
+say('## Remark 4.5 and Obs. 4.7');
 A = load_pair('test', 'case1'); D = exact_data(A, '0.1');
 B = cellfun(@(M) eye(3) + 0.1 * M, D.Af, 'UniformOutput', false);
 [wb, vb] = word_search(B, 0.1, struct('ntop', 2));
