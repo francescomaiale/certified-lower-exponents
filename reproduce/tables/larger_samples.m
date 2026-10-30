@@ -228,7 +228,7 @@ say(''); say('## Switching pairs (Table S6)'); say('');
 say('| d | pair | c | upper | g(0.1) <= | g(0.1) >= | g(0.05) <= | g(0.05) >= | width |');
 say('|---|---|---|---|---|---|---|---|---|');
 S = struct('d', {}, 'eps01', {}, 'eps005', {}, 'width', {});
-tex{end + 1} = '% Table 10 (tab:switchingnew)';
+tex{end + 1} = '% Table S6 (tab:switchingnew)';
 for q = 1:numel(info)
     I = info(q); pid = I.id; k = str2double(pid(find(pid == '_') + 1:end));
     U = jsondecode(fileread(fullfile(cs, [pid '_schedule.json']))); up = str2double(U.printed);
@@ -264,7 +264,7 @@ say('Explicit-word estimates are floating point, from scaling_word_estimates.jso
 say('');
 say('| d | pair | c | lower 0.1 | g(h) <= 0.1 | upper 0.1 | lower 0.05 | upper 0.05 | width | vertices (0.1) |');
 say('|---|---|---|---|---|---|---|---|---|---|');
-tex{end + 1} = '% Table 9 (tab:scalingnew)';
+tex{end + 1} = '% Table S5 (tab:scalingnew)';
 C = struct('d', {}, 'width', {});
 for q = 1:numel(info)
     I = info(q); pid = I.id; k = regexprep(pid, '.*[a-z]', '');

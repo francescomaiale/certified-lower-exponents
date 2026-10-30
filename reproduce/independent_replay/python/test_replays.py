@@ -149,7 +149,7 @@ class ReplayTests(unittest.TestCase):
                 self.assertFalse(replay_lower.replay_one(str(self.cert))[0])
 
     def test_cone_support_classes_and_empty_faces(self):
-        paths = list((Path(common.ROOT) / 'certificates/comp38').glob('*.json'))
+        paths = list((Path(common.ROOT) / 'certificates/reducible_pairs').glob('*.json'))
         cone = next(json.loads(p.read_text()) for p in paths if 'h1' in json.loads(p.read_text()))
         cone['classes'] = []
         self.cert.write_text(json.dumps(cone))

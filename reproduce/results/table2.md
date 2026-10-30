@@ -20,7 +20,7 @@ Width = upper - lower (MATLAB values), rounded up to two digits.  ^dagger: the b
 case 1440: h = 0.05), which holds here by prop:polytope(ii); the transfer certificate re-checks that polytope
 directly at this step (certificates/table2/<row>_transfer.json).
 
-## Remark 4.5 and Obs. 4.6
+## Remark 4.5 and Obs. 4.7
 - case 1, h = 0.1: best explicit word (length 8) gives g(0.1) <= -1.044232 (float, rounded up); certified g(0.1) >= -1.044234.
 - case 148, h = 0.1: 1836 vertices, 0 of them on the axis of e_2; min (v_1 + v_3)/1'v = 0.0741.
 - case 148: lambda_min <= (A_2)_22 = -1.368010 < -1.368009 (exact binary64 value -1.3680096637401422).

@@ -23,14 +23,14 @@ class ReproductionAssetsTests(unittest.TestCase):
             self.assertEqual(files[name]['shape'][0], 10)
             self.assertGreater(files[name]['shape'][1], 0)
 
-    def test_table9_word_column_matches_original_logs(self):
+    def test_scaling_word_column_matches_original_logs(self):
         folder = ROOT / 'results/larger_samples'
         records = json.loads((folder/'scaling_word_estimates.json').read_text())['records']
         info = json.loads((ROOT/'data/scaling_pairs_journal_info.json').read_text())
         expected = {(r['id'], h) for r in info for h in ('0.1', '0.05')}
         self.assertEqual(len(records), 66)
         self.assertEqual({(r['pair'], r['h']) for r in records}, expected)
-        tex = (ROOT/'results/larger_samples_tables.tex').read_text().split('% Table 9 (tab:scalingnew)')[1]
+        tex = (ROOT/'results/larger_samples_tables.tex').read_text().split('% Table S5 (tab:scalingnew)')[1]
         rows = {}
         for line in tex.splitlines():
             if not re.match(r'\d+ & ', line):

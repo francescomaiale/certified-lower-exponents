@@ -1,12 +1,12 @@
-# Larger samples of Obs. 4.7 and 4.8 (Tables 9 and 10)
+# Larger samples of Obs. 4.8 (Tables S5 and S6)
 
 From the stored certificates (certificates/larger_switching, larger_scaling) and run records
 (results/larger_samples).  Switching pairs: direct certificates at each step, as in Table 3; T = transposed family,
 + = extended search.  Chattering pairs: at h = 0.05 the larger of the direct certificate and the h = 0.1 bound
-(dagger, prop:polytope(ii)), as in Table 8.  Widths: upper (schedule, or c) minus the larger lower bound of the two
+(dagger, prop:polytope(ii)), as in Table S4.  Widths: upper (schedule, or c) minus the larger lower bound of the two
 steps, rounded up to two digits.  LaTeX rows: results/larger_samples_tables.tex.
 
-## Switching pairs (Table 10)
+## Switching pairs (Table S6)
 
 | d | pair | c | upper | g(0.1) <= | g(0.1) >= | g(0.05) <= | g(0.05) >= | width |
 |---|---|---|---|---|---|---|---|---|
@@ -60,7 +60,7 @@ steps, rounded up to two digits.  LaTeX rows: results/larger_samples_tables.tex.
 - d = 10 (20 pairs): h = 0.1 1e-5: 5, 1e-3: 6, 1e-2: 5, 0.02: 1, 0.05: 2, 0.1: 1; h = 0.05 1e-2: 5, 0.02: 3, 0.05: 1, 0.1: 7, 0.15: 1, 0.2: 1, none: 2; widths 5.0e-3 to 1.2e-1 (median 0.023)
 - d = 20 (5 pairs): h = 0.1 0.1: 5; h = 0.05 0.1: 1, none: 4; widths 1.1e-1 to 1.3e-1 (median 0.11)
 
-## Chattering pairs (Table 9)
+## Chattering pairs (Table S5)
 
 Explicit-word estimates are floating point, from scaling_word_estimates.json (original log excerpts); rounded upward to six decimals.
 

@@ -1,4 +1,4 @@
-# Ex. 4.10 (ex:bcv): the three-mode benchmark, MATLAB reproduction
+# Ex. 4.6 (ex:bcv): the three-mode benchmark, MATLAB reproduction
 
 - numerical mixture search: c approximately 0.008333 (the paper gives the exact value 1/120).
 - The revised paper proves lambda_check = -0.3 and lsr(B_h) = ((1-h)(1+0.1*h))^(1/3) for 0 < h < 1 (exact decimal model).

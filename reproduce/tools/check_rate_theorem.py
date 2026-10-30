@@ -73,7 +73,7 @@ def main():
     pairs = [("planar", test["planar"]), ("case 1", test["case1"])] + [(k, sc[k]) for k in
              ["d5_dense1", "d5_dense2", "d5_dense3", "d5_sparse1", "d5_sparse2", "d5_sparse3",
               "d10_dense1", "d10_dense2", "d10_dense3", "d10_sparse1", "d10_sparse2", "d10_sparse3"]]
-    table11 = [1.4780, 0.5480, 0.1785, 0.5888, 0.1975, 1.3307, 0.2024, 2.3887, 0.0447, 0.3178, 0.0770, 0.7134,
+    reference_Q = [1.4780, 0.5480, 0.1785, 0.5888, 0.1975, 1.3307, 0.2024, 2.3887, 0.0447, 0.3178, 0.0770, 0.7134,
                0.4656, 1.5941]
     say("# Rate-constant theorem (easy half): numerical check")
     say()
@@ -82,9 +82,9 @@ def main():
     say("| pair | alpha*_1 | c | Q = a(1-a) u'F^2v | Theorem 3.12 form | Table 5 | eta'' | paper A's Q |")
     say("|---|---|---|---|---|---|---|---|")
     info = {}
-    for (name, (A1, A2)), q11 in zip(pairs, table11):
+    for (name, (A1, A2)), q_reference in zip(pairs, reference_Q):
         a, c = chatter(A1, A2); QB, Qalt, QA, d2 = constants(A1, A2, a); info[name] = (a, c, QB)
-        say(f"| {name} | {a:.4f} | {c:+.6f} | {QB:.4f} | {Qalt:.4f} | {q11:.4f} | {d2:.3g} | {QA:+.4g} |")
+        say(f"| {name} | {a:.4f} | {c:+.6f} | {QB:.4f} | {Qalt:.4f} | {q_reference:.4f} | {d2:.3g} | {QA:+.4g} |")
     say()
     say("## 2. Balanced-word bounds, q = ceil(h^(-2/3)), p = round(q alpha*_1)")
     say()

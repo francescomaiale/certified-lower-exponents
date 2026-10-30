@@ -5,7 +5,7 @@ function T = table4_best_brackets(varargin)
 %                                                 and the two-segment schedules of cases 1440 and 148 (exponential
 %                                                 enclosures), both data readings; replay each certificate
 %   T = table4_best_brackets('part', 'summary')   Table 4 from these certificates and those of table2_test_pairs and
-%                                                 table7_scaling (lower: best of h = 0.1, 0.05; implicit Euler: best of
+%                                                 scaling_sample (lower: best of h = 0.1, 0.05; implicit Euler: best of
 %                                                 h = 0.1, 0.05), with the Alg. (L) columns of table4_algorithm_l if
 %                                                 present -> results/table4.md
 %   Options: 'pairs', 'force', 'replay', 'schedule' ('paper': the rational durations of the paper's optimized

@@ -14,7 +14,7 @@
 | planar | 0.025 | -0.213186 | -0.176426 | -0.194521 | -0.213186, -0.176426, -0.194521 | yes |
 | planar | 0.0125 | -0.203857 | -0.185482 | -0.194598 | -0.203857, -0.185482, -0.194598 | yes |
 
-Obs. 3.11: planar pair, c = min_alpha eta(S_alpha) = -0.1949763083 at alpha* = 0.3905 (paper: -0.1949763083, 0.3905);
+Obs. 3.13: planar pair, c = min_alpha eta(S_alpha) = -0.1949763083 at alpha* = 0.3905 (paper: -0.1949763083, 0.3905);
 predicted slope of G - g: 1.478 (paper 1.478); observed (G_up - g_est)/h at h = 0.0125: 1.470 (paper 1.472).
 
 Rows reproduced to the printed digits: 10 of 10.

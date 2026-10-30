@@ -1,8 +1,8 @@
 # Rate-constant theorem (easy half): numerical check
 
-## 1. Q against Table 11
+## 1. Q against Table 5
 
-| pair | alpha*_1 | c | Q = a(1-a) u'F^2v | Obs. 4.9 form | Table 11 | eta'' | paper A's Q |
+| pair | alpha*_1 | c | Q = a(1-a) u'F^2v | Theorem 3.12 form | Table 5 | eta'' | paper A's Q |
 |---|---|---|---|---|---|---|---|
 | planar | 0.3905 | -0.194976 | 1.4780 | 1.4780 | 1.4780 | 20.4 | +3.788 |
 | case 1 | 0.7890 | -1.012396 | 0.5480 | 0.5480 | 0.5480 | 4.03 | +5.461 |

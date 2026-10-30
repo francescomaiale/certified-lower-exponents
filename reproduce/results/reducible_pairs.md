@@ -1,4 +1,4 @@
-# Computation 3.8 (obs:cone): the reducible test pairs, MATLAB reproduction
+# Computation 3.9 (obs:cone): the reducible test pairs, MATLAB reproduction
 
 ## Invariant faces (binary64 data), both orientations
 

@@ -1,4 +1,4 @@
-# Table 11 (tab:rates): predicted and observed rate constants, MATLAB reproduction (floating point)
+# Table 5 (tab:rates): predicted and observed rate constants, MATLAB reproduction (floating point)
 
 Here g and G denote floating-point word estimates of the discrete minima. The gap and midpoint limits are diagnostics, not certified asymptotics.
 

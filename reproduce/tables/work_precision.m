@@ -1,5 +1,5 @@
-function T = fig1_work_precision(varargin)
-% FIG1_WORK_PRECISION  Obs. 4.9 (obs:glp) and Figure 2 (fig:wp): certified error U - (certified lower bound)
+function T = work_precision(varargin)
+% WORK_PRECISION  Obs. 4.9 (obs:glp) and Figure 2 (fig:wp): certified error U - (certified lower bound)
 % against computing time, for our Euler closure and the naive Algorithm (L), on three pairs (port of wp.py and
 % wp_plot.py).
 %   Pairs and fixed certified upper bounds U: case 1440 (two-segment schedule, 0.345674607), pair 4 in dimension 5 of
@@ -10,7 +10,7 @@ function T = fig1_work_precision(varargin)
 %   Algorithm (L), tau = h: glp_algorithm_l with 'glp_budget' seconds of closures (1200) and 300 s per closure.
 %   Times include the searches, every closure (failed ones too) and the exact checks; they depend on the machine.
 %   Options: 'pairs', 'hs', 'methods' ({'ours', 'glp'}), 'part' ('run', 'plot', 'all'), 'force'.
-%   Output: results/wp/<method>_<pair>_<h>.json, results/fig1_wp.pdf/.png, results/fig1.md.
+%   Output: results/wp/<method>_<pair>_<h>.json, results/work_precision.pdf/.png, results/work_precision.md.
 %   Long: the Algorithm (L) runs use their full budget (12 runs x 20 minutes); ours at h = 0.025 take minutes.
 
 p = inputParser;
@@ -22,7 +22,7 @@ root = paperB_root(); rdir = fullfile(root, 'results', 'wp');
 U = struct('case1440', 0.345674607, 'sw5_4', -0.4300830, 'case1', -1.012395841);
 EPS = [1e-5 1e-3 1e-2 1e-1];
 tag = sprintf('%s_%s_%s', o.part, strjoin(o.pairs, '+'), strjoin(o.methods, '+'));
-say = logger(fullfile(root, 'results', 'logs', ['fig1_' tag '.log']));
+say = logger(fullfile(root, 'results', 'logs', ['work_precision_' tag '.log']));
 if any(strcmp(o.part, {'run', 'all'}))
     for q = 1:numel(o.pairs)
         pid = o.pairs{q};
@@ -81,7 +81,7 @@ end
 
 
 function T = plot_wp(root, rdir, U)
-say = logger(fullfile(root, 'results', 'fig1.md'));
+say = logger(fullfile(root, 'results', 'work_precision.md'));
 say('# Figure 2 (fig:wp): work and precision, MATLAB reproduction (times depend on the machine)');
 say('');
 say('| pair | method | h or tau | certified lower | error U - lower | time (s) |');
@@ -122,9 +122,9 @@ for q = 1:numel(pairs)
     if q == 1, ylabel(ax, 'certified error U - lower bound'); end
     if q == 1, legend(ax, 'Location', 'southwest', 'FontSize', 6, 'Box', 'off'); end
 end
-exportgraphics(fig, fullfile(root, 'results', 'fig1_wp.pdf'), 'ContentType', 'vector');
-exportgraphics(fig, fullfile(root, 'results', 'fig1_wp.png'), 'Resolution', 200);
+exportgraphics(fig, fullfile(root, 'results', 'work_precision.pdf'), 'ContentType', 'vector');
+exportgraphics(fig, fullfile(root, 'results', 'work_precision.png'), 'Resolution', 200);
 close(fig);
 say('');
-say('Figure: results/fig1_wp.pdf (.png).  Times below 0.1 s are drawn at 0.1 s.');
+say('Figure: results/work_precision.pdf (.png).  Times below 0.1 s are drawn at 0.1 s.');
 end

@@ -1,22 +1,22 @@
-function T = comp38_reducible_pairs(varargin)
-% COMP38_REDUCIBLE_PAIRS  Computation 3.9 (obs:cone): the reducible test pairs, cases 77, 148, 677, 1195, 1440.
+function T = reducible_pairs(varargin)
+% REDUCIBLE_PAIRS  Computation 3.9 (obs:cone): the reducible test pairs, cases 77, 148, 677, 1195, 1440.
 %   - Invariant faces (both orientations): every proper face F_J invariant under some mode, with an exact lower
 %     bound for its exponent eta(A_i[J,J]) (Collatz-Wielandt with a nonnegative eigenvector), against a certified
 %     upper bound for the chattering value c >= lambda_check (Collatz-Wielandt at a rational alpha); binary64 data.
-%     Certificates: certificates/comp38/faces_<case>.json, replayed by replay_faces.
+%     Certificates: certificates/reducible_pairs/faces_<case>.json, replayed by replay_faces.
 %   - Case 148, transposed family, h1 = 1/5: the cone C = {x >= 0 : (1 - kappa)(x1 + x2) >= kappa x3}, kappa = 1/20,
 %     with extreme rays e1, e2, (kappa, 0, 1 - kappa), (0, kappa, 1 - kappa), is invariant under both Euler maps, and
-%     its support classes are all nonempty subsets of {1,2,3} except {3}.  certificates/comp38/cone_case148_T.json.
+%     its support classes are all nonempty subsets of {1,2,3} except {3}.  certificates/reducible_pairs/cone_case148_T.json.
 %   - Cases 77 (as given) and 677 (transposed), h1 = 0.2: invariant polygons of prop:cone(ii), from the hull of the
 %     projective Euler orbit of 1, inflated (eps 1e-3 and 1e-4 as in the paper; if MATLAB's hull then misses exact
-%     invariance by an image on the boundary, the next factor of a short list).  certificates/comp38/polygon_case77_A.json and
+%     invariance by an image on the boundary, the next factor of a short list).  certificates/reducible_pairs/polygon_case77_A.json and
 %     polygon_case677_T.json.
 %   Every cone certificate is checked exactly (facet normals) and replayed by a different method (replay_cone: fan
-%   triangulation and barycentric coordinates).  Summary: results/comp38.md.  Runtime: about a minute.
+%   triangulation and barycentric coordinates).  Summary: results/reducible_pairs.md.  Runtime: about a minute.
 
 p = inputParser; p.addParameter('replay', true); p.parse(varargin{:}); o = p.Results;
-root = paperB_root(); cdir = fullfile(root, 'certificates', 'comp38');
-say = logger(fullfile(root, 'results', 'comp38.md'));
+root = paperB_root(); cdir = fullfile(root, 'certificates', 'reducible_pairs');
+say = logger(fullfile(root, 'results', 'reducible_pairs.md'));
 say('# Computation 3.9 (obs:cone): the reducible test pairs, MATLAB reproduction');
 say('');
 say('## Invariant faces (binary64 data), both orientations');

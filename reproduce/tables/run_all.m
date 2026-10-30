@@ -15,21 +15,21 @@ if ~ismember(string(profile), ["quick", "full"]), error('run_all:profile', 'prof
 full = strcmp(profile, 'full');
 t0 = tic;
 fprintf('== Table 1\n'); table1_sandwich();
-fprintf('== Computation 3.9\n'); comp38_reducible_pairs();
+fprintf('== Computation 3.9\n'); reducible_pairs();
 fprintf('== Table 2\n');
 rows = {'planar_0.1', 'planar_0.05', 'planar_0.025', 'planar_0.0125', 'case1_0.1', 'case1_0.05', ...
         'case1440_0.1', 'case1440_0.05', 'case1440_0.025', 'case148_0.1', 'case148_0.05', 'case148_0.025'};
 if full, rows{end + 1} = 'case1_0.025'; end
 table2_test_pairs('rows', rows, 'part', 'lower'); table2_test_pairs('rows', rows, 'part', 'transfer');
 table2_test_pairs('part', 'upper'); table2_test_pairs('part', 'summary');
-fprintf('== Ex. 4.6\n'); ex410_bcv();
+fprintf('== Ex. 4.6\n'); three_mode_example();
 fprintf('== Obs. 4.8 / Table S4\n');
 if full
-    table7_scaling();
+    scaling_sample();
 else
-    table7_scaling('pairs', {'d5_dense1', 'd5_dense2', 'd5_dense3', 'd5_sparse1', 'd5_sparse2', 'd5_sparse3'}, ...
+    scaling_sample('pairs', {'d5_dense1', 'd5_dense2', 'd5_dense3', 'd5_sparse1', 'd5_sparse2', 'd5_sparse3'}, ...
                    'hs', {'0.1'}, 'part', 'lower');
-    table7_scaling('part', 'upper'); table7_scaling('part', 'summary');
+    scaling_sample('part', 'upper'); scaling_sample('part', 'summary');
 end
 fprintf('== Table 4\n'); table4_best_brackets('part', 'certify');
 if full, table4_algorithm_l(); end
@@ -41,9 +41,9 @@ else
     table3_switching('pairs', arrayfun(@(k) sprintf('sw5_%d', k), 1:10, 'UniformOutput', false), 'hs', {'0.1'}, ...
                      'part', 'all');
 end
-fprintf('== Appendix C / Table 5\n'); table8_rates();
+fprintf('== Appendix C / Table 5\n'); rate_diagnostics();
 if full
-    fprintf('== Fig. 2\n'); fig1_work_precision();
+    fprintf('== Fig. 2\n'); work_precision();
 end
 fprintf('== done in %.0f s; summaries in results/*.md\n', toc(t0));
 end

@@ -2,7 +2,7 @@ function [ok, msgs, info] = replay_faces(C, A)
 % REPLAY_FACES  Independent exact re-check of an invariant-face certificate (invariant_faces; Computation 3.9).
 %   [ok, msgs, info] = replay_faces(C, A)
 %     C  certificate (.json file, JSON text or decoded struct) with fields case and orientations (one entry per
-%        orientation, as written by comp38_reducible_pairs); A data (optional; default from data/*.json)
+%        orientation, as written by reducible_pairs); A data (optional; default from data/*.json)
 %   Shares no code with invariant_faces.  For each orientation, with the binary64 data (transposed for 'T'):
 %     - the bound for c: x > 0 and (S_alpha x)_r <= U x_r for every r (Collatz-Wielandt, cross-multiplied);
 %     - the list of faces J with S(J) nonempty, and S(J) itself, are recomputed from the zero pattern of the data

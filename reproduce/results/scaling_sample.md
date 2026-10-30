@@ -1,4 +1,4 @@
-# Table 8 (tab:scaling): random pairs in dimension 5, MATLAB reproduction
+# Table S4 (tab:scaling): random pairs in dimension 5, MATLAB reproduction
 
 | pair (c) | h | lower (MATLAB) | lower (paper) | g(h) <= (GM run, paper) | upper (MATLAB) | upper (paper) | width | |V| MATLAB / paper | match |
 |---|---|---|---|---|---|---|---|---|---|

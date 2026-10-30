@@ -1,4 +1,4 @@
-# Figure 1 (fig:wp): work and precision, MATLAB reproduction (times depend on the machine)
+# Figure 2 (fig:wp): work and precision, MATLAB reproduction (times depend on the machine)
 
 | pair | method | h or tau | certified lower | error U - lower | time (s) |
 |---|---|---|---|---|---|
@@ -27,4 +27,4 @@
 | case1 | glp | 0.05 | -1.028581000 | 1.619e-02 | 1258 |
 | case1 | glp | 0.025 | -1.019811000 | 7.415e-03 | 1378 |
 
-Figure: results/fig1_wp.pdf (.png).  Times below 0.1 s are drawn at 0.1 s.
+Figure: results/work_precision.pdf (.png).  Times below 0.1 s are drawn at 0.1 s.

@@ -1,5 +1,5 @@
-function R = ex410_bcv(varargin)
-% EX410_BCV  Ex. 4.6 (ex:bcv): the three-mode benchmark of Blanchini, Colaneri and Valcher (CDC 2013), eps = 1/10
+function R = three_mode_example(varargin)
+% THREE_MODE_EXAMPLE  Ex. 4.6 (ex:bcv): the three-mode benchmark of Blanchini, Colaneri and Valcher (CDC 2013), eps = 1/10
 % (port of bcv_benchmark.py).
 %   - c = min over the simplex of eta(S_alpha) (floating point; the paper: 1/120);
 %   - Computation: the cyclic schedule A_3, A_2, A_1 with dwell time 30 in each mode, certified with exponential
@@ -10,13 +10,13 @@ function R = ex410_bcv(varargin)
 %     levels g = -1.01 (they finish) and g = -0.99 (they do not; every polytope certificate is capped at 1 - h, so no
 %     closure above it can finish).  The closures above the cap are stopped after 'tmax' seconds (120, as in the
 %     paper) or 'pmax' processed vertices (20000).
-%   Certificate: certificates/bcv/bcv13_schedule.json.  Output: results/ex410.md.  Runtime: a few minutes.
+%   Certificate: certificates/bcv/bcv13_schedule.json.  Output: results/three_mode_example.md.  Runtime: a few minutes.
 
 p = inputParser; p.addParameter('tmax', 120); p.addParameter('pmax', 20000);
 p.addParameter('outdir', ''); p.parse(varargin{:}); o = p.Results;
 root = paperB_root();
 if ~isempty(o.outdir), root = char(o.outdir); end
-say = logger(fullfile(root, 'results', 'ex410.md'));
+say = logger(fullfile(root, 'results', 'three_mode_example.md'));
 A = load_pair('bcv', 'bcv13'); Af = cellfun(@str2double, A, 'UniformOutput', false);
 say('# Ex. 4.6 (ex:bcv): the three-mode benchmark, MATLAB reproduction');
 say('');

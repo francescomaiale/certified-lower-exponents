@@ -1,13 +1,13 @@
-function T = table7_scaling(varargin)
-% TABLE7_SCALING  Obs. 4.8 (obs:scaling) and Table S4 (tab:scaling): certified brackets for the random pairs in
+function T = scaling_sample(varargin)
+% SCALING_SAMPLE  Obs. 4.8 (obs:scaling) and Table S4 (tab:scaling): certified brackets for the random pairs in
 % dimensions 5 and 10 with apparent chattering behavior (a numerical classification) (data/scaling_pairs.json).
-%   T = table7_scaling('mode', 'reproduce')   (default) each lower bound by one closure at the level where the
+%   T = scaling_sample('mode', 'reproduce')   (default) each lower bound by one closure at the level where the
 %                                             paper's 30-minute bisection last closed (data/paper_search_results.json)
-%   T = table7_scaling('mode', 'search')      bisection between the trivial level and min(1 + h c, best explicit
+%   T = scaling_sample('mode', 'search')      bisection between the trivial level and min(1 + h c, best explicit
 %                                             word) with machine-independent caps ('pmax', 'maxprobes')
 %   Options: 'cdir' (certificate folder, e.g. a scratch folder for a search-mode run), 'pairs' (cellstr, default all 12), 'hs' ({'0.1', '0.05'}), 'part' ('lower', 'upper', 'summary',
 %   'all'), 'force', 'replay'.  Certificates: certificates/scaling/<pair>_<h>_best.json and <pair>_<h>.json.
-%   Summary: results/table7.md (Table S4, d = 5) and the d = 10 statements of Obs. 4.8.
+%   Summary: results/scaling_sample.md (Table S4, d = 5) and the d = 10 statements of Obs. 4.8.
 %
 %   Long: every lower row has 1100 to 2800 vertices; in reproduce mode a d = 5 row takes 5 to 20 minutes and a d = 10
 %   row 20 to 60 minutes (closure, exact check, replay), single thread.
@@ -21,8 +21,8 @@ root = paperB_root(); cdir = o.cdir; if isempty(cdir), cdir = fullfile(root, 'ce
 [~, all_pairs] = load_pair('scaling');
 pairs = o.pairs; if isempty(pairs), pairs = all_pairs; end
 info = jsondecode(fileread(fullfile(root, 'data', 'scaling_pairs_info.json')));
-say = logger(fullfile(root, 'results', 'logs', sprintf('table7_%s_%s.log', o.part, strjoin(pairs, '+'))));
-if numel(pairs) > 3, say = logger(fullfile(root, 'results', 'logs', sprintf('table7_%s.log', o.part))); end
+say = logger(fullfile(root, 'results', 'logs', sprintf('scaling_sample_%s_%s.log', o.part, strjoin(pairs, '+'))));
+if numel(pairs) > 3, say = logger(fullfile(root, 'results', 'logs', sprintf('scaling_sample_%s.log', o.part))); end
 for q = 1:numel(pairs)
     pid = pairs{q}; A = load_pair('scaling', pid); d = size(A{1}, 1);
     for hh = o.hs
@@ -68,7 +68,7 @@ end
 
 
 function T = summary(cdir, root, info)
-say = logger(fullfile(root, 'results', 'table7.md'));
+say = logger(fullfile(root, 'results', 'scaling_sample.md'));
 % paper values (tab:scaling): lower at h = 0.1, upper at h = 0.1 and 0.05, |V|
 P = {'d5_dense1', '-0.222751', '-0.204815', '-0.209005', 1755; 'd5_dense2', '-0.059850', '-0.000609', '-0.014798', 1391;
      'd5_dense3', '0.222107', '0.242747', '0.237887', 1146;   'd5_sparse1', '-0.107049', '0.029982', '-0.001609', 1118;
